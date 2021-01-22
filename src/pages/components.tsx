@@ -1,16 +1,12 @@
 import React from 'react'
 import { Layout } from '../components'
-import tw, { styled } from 'twin.macro'
 import { PictureAccordian, SimpleAccordian } from '../components/shared'
 import { useFeatures, useFaqs } from '../hooks'
 
-const Container = styled.div`
-  ${tw`mx-4 lg:mx-56`}
-`
 export default function Home(): JSX.Element {
   return (
     <Layout>
-      <Container>
+      <div>
         <div>
           <h1>Headding 1</h1>
           <h2>Headding 2</h2>
@@ -28,7 +24,7 @@ export default function Home(): JSX.Element {
             consectetur. Sunt consectetur veniam elit ullamco. Fugiat dolore labore deserunt nulla exercitation.
           </p>
         </div>
-        <div tw="justify-between m-10 flex-wrap h-48 flex content-between place-content-around">
+        <div>
           <button className="button">Button Solid Primary</button>
           <button className="button secondry"> Solid Primary</button>
           <button className="button base"> Solid Base</button>
@@ -38,7 +34,7 @@ export default function Home(): JSX.Element {
 
         <SimpleAccordian singleOpen accordianData={useFaqs()} />
         <PictureAccordian singleOpen accordianData={useFeatures()} />
-      </Container>
+      </div>
     </Layout>
   )
 }

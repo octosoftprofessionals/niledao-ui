@@ -1,6 +1,5 @@
 import React from 'react'
 
-import tw, { styled } from 'twin.macro'
 import { graphql } from 'gatsby'
 import Image from 'gatsby-image/withIEPolyfill'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
@@ -23,10 +22,6 @@ function getPost(node: any): Post {
   }
 }
 
-const HeroImage = styled(Image)`
-  ${tw`w-full shadow-xl m-0 p-0`}
-`
-
 const imageRender = node => {
   const { fields } = node.data.target
   return fields && <img tw="mx-auto my-6" src={`https://${fields.file['en-US'].url}`} />
@@ -41,8 +36,8 @@ export default function BlogPosts({ data }): JSX.Element {
   }
   return (
     <Layout>
-      <HeroImage fluid={featuredImage} objectFit="fill" />
-      <h1 tw="text-center">{title} </h1>
+      <Image fluid={featuredImage} objectFit="fill" />
+      <h1>{title} </h1>
       {documentToReactComponents(body, options)}
     </Layout>
   )

@@ -1,26 +1,15 @@
 import React from 'react'
 import { Layout } from '../components'
 import { usePosts, Post } from '../hooks'
-import tw, { styled } from 'twin.macro'
-
 import Image from 'gatsby-image'
 import { Link } from 'gatsby'
 
-const Card = styled.div`
-  ${tw`sm:max-w-sm rounded overflow-hidden shadow-lg sm:mx-6 mb-12`}/* &:first-of-type {
-    ${tw`md:ml-0 `}
-  } */
-`
-const Title = styled.span`
-  ${tw`font-bold text-2xl mb-2`}
-`
-
 function getPosts(posts: Post[]) {
   return posts.map(post => (
-    <Card key={post.id}>
+    <div key={post.id}>
       <Image tw="max-w-sm rounded-lg  shadow-lg z-0" fluid={post.featuredImage} />
       <div tw="px-6 py-4">
-        <Title>{post.title}</Title>
+        <div>{post.title}</div>
         <p tw="text-base">
           {post.description} <br />
           <Link to={`/blog/${post.slug}`} tw="">
@@ -39,7 +28,7 @@ function getPosts(posts: Post[]) {
           </span>
         ))}
       </div>
-    </Card>
+    </div>
   ))
 }
 export default function Blog(): JSX.Element {

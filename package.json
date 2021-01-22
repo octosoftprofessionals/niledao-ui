@@ -28,13 +28,10 @@
     "@contentful/gatsby-transformer-contentful-richtext": "^13.1.0",
     "@contentful/rich-text-react-renderer": "^14.1.2",
     "@contentful/rich-text-types": "^14.1.2",
-    "@emotion/react": "^11.1.4",
-    "@emotion/core": "^11.0.0",
-    "@emotion/styled": "^11.0.0",
+    "@material-ui/core": "^4.11.2",
     "dotenv": "^8.2.0",
     "gatsby": "^2.31.1",
     "gatsby-image": "^2.10.0",
-    "gatsby-plugin-emotion": "^5.3.0",
     "gatsby-plugin-eslint": "^2.0.8",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-react-helmet": "^3.9.0",
@@ -47,8 +44,7 @@
     "gatsby-transformer-sharp": "^2.11.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "react-helmet": "^6.1.0",
-    "twin.macro": "^2.1.0"
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^1.20.0",
@@ -71,6 +67,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-standard": "^5.0.0",
+    "gatsby-plugin-material-ui": "^2.1.10",
     "husky": "^4.3.8",
     "lint-staged": "^10.5.3",
     "nodemon": "^2.0.7",
@@ -80,12 +77,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ersanyamarya/gatsby-typescript-tailwindcss-contentful-boilerplate"
+    "url": "https://github.com/ersanyamarya/gatsby-typescript-materialui-contentful-boilerplate"
   },
   "bugs": {
-    "url": "https://github.com/ersanyamarya/gatsby-typescript-tailwindcss-contentful-boilerplate/issues"
+    "url": "https://github.com/ersanyamarya/gatsby-typescript-materialui-contentful-boilerplate/issues"
   },
-  "homepage": "https://github.com/ersanyamarya/gatsby-typescript-tailwindcss-contentful-boilerplate#readme",
+  "homepage": "https://github.com/ersanyamarya/gatsby-typescript-materialui-contentful-boilerplate#readme",
   "author": {
     "name": "Sanyam Arya",
     "email": "er.sanyam.arya@gmail.com",

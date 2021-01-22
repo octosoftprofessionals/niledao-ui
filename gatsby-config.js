@@ -4,24 +4,24 @@ dotenv.config()
 
 module.exports = {
   siteMetadata: {
-    title: ` Gatsby Typescript Tailwindcss Contentful Boilerplate`,
-    siteUrl: `https://ersanyamarya.github.io/gatsby-typescript-tailwindcss-contentful-boilerplate/`,
+    title: ` Gatsby Typescript materialui Contentful Boilerplate`,
+    siteUrl: `https://ersanyamarya.github.io/gatsby-typescript-materialui-contentful-boilerplate/`,
     description: `Gatsby Boilerplate with Typescript`,
     titleTemplate: '%s · Boiler Plate',
-    url: `https://www.sanyamarya.com`, // no trailing slash!
+    url: `https://www.sanyamarya.com`,
     image: '/images/logo.png',
     owner: 'Boiler Plate',
     twitterUsername: '@sanyamarya',
     facebookAppID: '',
   },
-  pathPrefix: '/gatsby-typescript-tailwindcss-contentful-boilerplate',
+  pathPrefix: '/gatsby-typescript-materialui-contentful-boilerplate',
   plugins: [
-    'gatsby-plugin-emotion',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-material-ui`,
     {
       resolve: 'gatsby-plugin-eslint',
       options: {
@@ -51,7 +51,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: ['Futura'],
+        fonts: ['Futura', 'Roboto'],
         display: 'swap',
       },
     },

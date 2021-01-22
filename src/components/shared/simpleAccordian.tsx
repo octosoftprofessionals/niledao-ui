@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import tw, { styled } from 'twin.macro'
 import { AccordianDataSchema } from '../../hooks'
 import Section from './section'
 
@@ -8,28 +7,6 @@ interface Props {
   hoverToOpen?: boolean
   accordianData: AccordianDataSchema[]
 }
-
-const Accord = styled.div`
-  ${tw`m-0`}
-`
-const Title = styled.h3`
-  ${tw`text-xl py-2 block text-primary-dark flex justify-between cursor-pointer sm:hover:px-2
-  transition-all duration-300 ease-in-out`}
-`
-const Description = styled.p`
-  ${tw`py-0 m-0 text-lg transition-all duration-300 ease-in-out h-0 opacity-0`}
-  &.expand {
-    ${tw`p-2 h-auto opacity-100`}
-  }
-`
-
-const Icon = styled.svg`
-  ${tw`w-5 group-hover:w-6 m-0 p-0 transition-all duration-300 ease-in-out fill-current`}
-
-  &.rotate {
-    transform: rotateX(180deg);
-  }
-`
 
 export default function SimpleAccordian({
   singleOpen = false,
@@ -40,8 +17,8 @@ export default function SimpleAccordian({
   return (
     <Section title="Frequently Asked Question">
       {data.map(faq => (
-        <Accord key={faq.id}>
-          <Title
+        <div key={faq.id}>
+          <div
             className="group"
             onClick={() => {
               if (!singleOpen) faq.open = !faq.open
@@ -67,7 +44,7 @@ export default function SimpleAccordian({
             }}
           >
             {faq.title}
-            <Icon
+            <svg
               className={faq.open ? 'rotate' : ''}
               aria-hidden="true"
               focusable="false"
@@ -82,12 +59,12 @@ export default function SimpleAccordian({
               140v116h-70.9c-10.7 0-16.1 13-8.5 20.5l114.9 114.3c4.7 4.7 12.2 4.7 16.9
               0l114.9-114.3c7.6-7.6 2.2-20.5-8.5-20.5H300V140c0-6.6-5.4-12-12-12h-64c-6.6 0-12 5.4-12 12z"
               ></path>
-            </Icon>
-          </Title>
-          <Description className={faq.open ? 'expand' : ''}>{faq.description}</Description>
+            </svg>
+          </div>
+          <div className={faq.open ? 'expand' : ''}>{faq.description}</div>
 
           <hr />
-        </Accord>
+        </div>
       ))}
     </Section>
   )

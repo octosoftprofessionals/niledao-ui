@@ -1,16 +1,15 @@
 import React from 'react'
 import { Layout } from '../components'
-import tw, { styled } from 'twin.macro'
-
-const Hero = styled.div`
-  ${tw`block sm:flex px-6 py-6`}
-`
+import { Button, Typography } from '@material-ui/core'
 export default function Home(): JSX.Element {
   return (
     <Layout>
-      <Hero>
-        <h1>Gatsby Typescript Tailwindcss Contentful Boilerplate</h1>
-      </Hero>
+      <div>
+        <Typography variant="h1">Gatsby Typescript Material UI Contentful Boilerplate</Typography>
+        <Button variant="contained" color="primary">
+          Click me !
+        </Button>
+      </div>
     </Layout>
   )
 }
