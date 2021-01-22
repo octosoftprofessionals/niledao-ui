@@ -1,0 +1,18 @@
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+ul {
+  margin-left: 2rem;
+  list-style: disc;
+}
+
+li > ul {
+  margin-left: 2rem;
+  list-style: circle;
+}

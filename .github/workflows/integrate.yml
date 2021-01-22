@@ -1,0 +1,18 @@
+name: Integrate
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  auto_merge_dependabot:
+    name: Merge pull Request
+    runs-on: ubuntu-latest
+    if: github.base_ref == 'master' && github.actor == 'dependabot[bot]'
+    steps:
+      - name: Merge
+        uses: ridedott/merge-me-action@master
+        with:
+          GITHUB_LOGIN: dependabot[bot]
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
