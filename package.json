@@ -40,7 +40,7 @@
     "gatsby-plugin-sitemap": "^2.11.0",
     "gatsby-plugin-smoothscroll": "^1.2.0",
     "gatsby-plugin-ts-config": "^1.1.5",
-    "gatsby-source-contentful": "^4.5.1",
+    "gatsby-source-contentful": "^4.5.2",
     "gatsby-source-filesystem": "^2.10.0",
     "gatsby-transformer-sharp": "^2.11.0",
     "react": "^16.14.0",
