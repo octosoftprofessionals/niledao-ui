@@ -36,7 +36,7 @@
     "gatsby-plugin-eslint": "^2.0.8",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-react-helmet": "^3.9.0",
-    "gatsby-plugin-sharp": "^2.13.2",
+    "gatsby-plugin-sharp": "^2.13.3",
     "gatsby-plugin-sitemap": "^2.11.0",
     "gatsby-plugin-smoothscroll": "^1.2.0",
     "gatsby-plugin-ts-config": "^1.1.5",
