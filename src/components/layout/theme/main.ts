@@ -1,15 +1,14 @@
-import { getParseTreeNode } from 'typescript'
-
-import { green, red, yellow } from '@material-ui/core/colors'
 export default {
   typography: {
     fontFamily: ['Roboto'].join(','),
   },
 
   palette: {
-    // type: 'dark',
-
-    primary: green,
-    secondary: red,
+    primary: {
+      main: '#26a69a',
+    },
+    secondary: {
+      main: '#80cbc4',
+    },
   },
 }

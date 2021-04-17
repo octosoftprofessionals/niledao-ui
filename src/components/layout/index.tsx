@@ -12,9 +12,7 @@ const useStyles = makeStyles((theme: Theme) =>
     toolbar: theme.mixins.toolbar,
     content: {
       flexGrow: 1,
-      padding: theme.spacing(3),
-      // width: `calc(100% - ${drawerWidth}px)`,
-      // marginLeft: drawerWidth,
+      padding: theme.spacing(5),
     },
   })
 )

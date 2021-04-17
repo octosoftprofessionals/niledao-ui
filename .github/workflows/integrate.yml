@@ -3,13 +3,13 @@ name: Integrate
 on:
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   auto_merge_dependabot:
     name: Merge pull Request
     runs-on: ubuntu-latest
-    if: github.base_ref == 'master' && github.actor == 'dependabot[bot]'
+    if: github.base_ref == 'main' && github.actor == 'dependabot[bot]'
     steps:
       - name: Merge
         uses: ridedott/merge-me-action@master
