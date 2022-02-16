@@ -51,7 +51,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: ['Futura', 'Roboto'],
+        fonts: ['Futura', 'Roboto', 'Cairo'],
         display: 'swap',
       },
     },

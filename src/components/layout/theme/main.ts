@@ -1,6 +1,6 @@
 export default {
   typography: {
-    fontFamily: ['Roboto'].join(','),
+    fontFamily: ['Cairo'].join(','),
   },
 
   palette: {

@@ -1,3 +1,6 @@
-import Layout from './layout'
-import SEO from './SEO'
-export { Layout, SEO }
+import Home from './layout/Home'
+import FirstLand from './FirstLand'
+import SecondLand from './SecondLand'
+import ThirdLand from './ThirdLand'
+import ContactUs from './ContactUs'
+export { Home, FirstLand, SecondLand, ThirdLand, ContactUs }

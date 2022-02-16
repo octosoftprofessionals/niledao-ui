@@ -1,40 +1,21 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import { AccordianDataSchema } from '.'
 
-import { Query } from '../types/generated'
-
 export function useFeatures(): AccordianDataSchema[] {
-  const data: Query = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query {
       allContentfulPost {
         nodes {
           id
           slug
           title
-          twitterDescription {
-            twitterDescription
-          }
-          featuredImage {
-            fluid {
-              sizes
-              aspectRatio
-              base64
-              src
-              srcSet
-              srcSetWebp
-              srcWebp
-              tracedSVG
-            }
-          }
         }
       }
     }
   `)
   const dataToReturn = data.allContentfulPost.nodes.map(node => ({
     id: node.id,
-    featuredImage: node.featuredImage.fluid,
     title: node.title,
-    description: node.twitterDescription.twitterDescription,
     open: false,
   }))
   const aa = [...dataToReturn, dataToReturn[1]]

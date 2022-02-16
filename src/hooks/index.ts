@@ -7,11 +7,6 @@ interface Post {
   id: string
   title: string
   slug: string
-  twitterDescription: string
-  description: string
-  keywords: string[]
-  category: string[]
-  featuredImage: any
   body?: any
 }
 interface File {
@@ -23,8 +18,6 @@ interface File {
 interface AccordianDataSchema {
   id: string
   title: string
-  description: string
-  featuredImage?: any
   open: boolean
 }
 export type { Post, File, AccordianDataSchema }
