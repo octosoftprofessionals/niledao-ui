@@ -32,7 +32,6 @@ export default function ContactUs(props): JSX.Element {
     })
   }
 
-  console.log(information)
   return (
     <div className={classes.root}>
       <form onSubmit={handleSubmit}>
