@@ -74,6 +74,9 @@ const useStyles = makeStyles<DefaultTheme>({
     backgroundColor: '#FBEACC',
     margin: '1rem',
     borderRadius: '20px',
+    '@media (max-width: 1024px)': {
+      width: '90%',
+    },
   },
   boxes2: {
     display: 'flex',
@@ -89,6 +92,9 @@ const useStyles = makeStyles<DefaultTheme>({
     backgroundColor: '#FBEACC',
     margin: '1rem',
     borderRadius: '20px',
+    '@media (max-width: 1024px)': {
+      width: '90%',
+    },
   },
   boxes3: {
     display: 'flex',
@@ -104,6 +110,9 @@ const useStyles = makeStyles<DefaultTheme>({
     backgroundColor: '#FBEACC',
     margin: '1rem',
     borderRadius: '20px',
+    '@media (max-width: 1024px)': {
+      width: '90%',
+    },
   },
   button: {
     width: '7rem',

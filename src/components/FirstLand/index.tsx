@@ -49,6 +49,15 @@ const useStyles = makeStyles<DefaultTheme>({
     justifyContent: 'flex-start',
     zIndex: 1,
     overflow: 'hidden',
+    '@media (max-width: 1280px)': {
+      minHeight: '125vh',
+    },
+    '@media (max-width: 1000px)': {
+      minHeight: '125vh',
+    },
+    '@media (max-width: 600px)': {
+      minHeight: '80vh',
+    },
   },
   Pyramid: {
     position: 'absolute',
@@ -57,6 +66,12 @@ const useStyles = makeStyles<DefaultTheme>({
     top: '30%',
     right: '0',
     zIndex: 2,
+    '@media (max-width: 1280px)': {
+      top: '30%',
+    },
+    '@media (max-width: 1000px)': {
+      top: '10%',
+    },
   },
   ruby: {
     width: '36%',
@@ -64,12 +79,27 @@ const useStyles = makeStyles<DefaultTheme>({
     top: '45%',
     right: '17%',
     zIndex: 3,
+    '@media (max-width: 1280px)': {
+      width: '50%',
+      top: '40%',
+      right: '0',
+    },
+    '@media (max-width: 1000px)': {
+      width: '60%',
+      top: '30%',
+    },
+    '@media (max-width: 600px)': {
+      top: '43%',
+    },
   },
   Lines: {
     position: 'absolute',
-    top: '70vh',
-    left: '25vh',
+    top: '70%',
+    left: '10%',
     zIndex: 2,
+    '@media (max-width: 1280px)': {
+      display: 'none',
+    },
   },
   container: {
     display: 'flex',
@@ -80,6 +110,17 @@ const useStyles = makeStyles<DefaultTheme>({
     justifyContent: 'flex-start',
     backgroundColor: '#F4C066',
     zIndex: 1,
+    '@media (max-width: 1280px)': {
+      paddingTop: '15vh',
+      height: '55vh',
+    },
+    '@media (max-width: 1000px)': {
+      height: '44vh',
+      paddingTop: '10vh',
+    },
+    '@media (max-width: 600px)': {
+      height: '40vh',
+    },
   },
   auxDiv: {
     display: 'flex',
@@ -88,13 +129,19 @@ const useStyles = makeStyles<DefaultTheme>({
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
     paddingLeft: '5vh',
+    '@media (max-width: 1280px)': {
+      paddingLeft: '1rem',
+    },
   },
   logoDiv: {
     display: 'flex',
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
     width: '10%',
-    height: 'fit-content1',
+    height: 'fit-content',
+    '@media (max-width: 1280px)': {
+      display: 'none',
+    },
   },
   logo: {
     width: '8rem',
@@ -106,19 +153,36 @@ const useStyles = makeStyles<DefaultTheme>({
     justifyContent: 'flex-start',
     flexDirection: 'column',
     width: '50%',
+    '@media (max-width: 1280px)': {
+      width: '65%',
+    },
   },
   title: {
+    display: 'flex',
     fontSize: '7vh',
     fontWeight: 900,
     textTransform: 'uppercase',
     color: '#233D91',
     marginBottom: '1rem',
+    '@media (max-width: 1280px)': {
+      fontSize: '7vh',
+    },
+    '@media (max-width: 1000px)': {
+      width: '100vw',
+      fontSize: '4vh',
+    },
   },
   subtitle: {
     fontSize: '5vh',
     fontWeight: 900,
     color: '#EA6B0F',
     marginBottom: '1rem',
+    '@media (max-width: 1280px)': {
+      fontSize: '4vh',
+    },
+    '@media (max-width: 1000px)': {
+      fontSize: '3vh',
+    },
   },
   description: {
     display: 'flex',
@@ -128,5 +192,11 @@ const useStyles = makeStyles<DefaultTheme>({
     color: '#000F41',
     marginBottom: '1rem',
     marginTop: '1rem',
+    '@media (max-width: 1280px)': {
+      fontSize: '3vh',
+    },
+    '@media (max-width: 1000px)': {
+      fontSize: '2vh',
+    },
   },
 })

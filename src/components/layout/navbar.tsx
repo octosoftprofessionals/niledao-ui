@@ -77,7 +77,7 @@ const useStyles = makeStyles<DefaultTheme>({
     border: 'transparent',
     borderRadius: '10px',
     '&:hover': {
-      color: '#233D91',
+      backgroundColor: '#c1622a',
     },
   },
   buttons: {
