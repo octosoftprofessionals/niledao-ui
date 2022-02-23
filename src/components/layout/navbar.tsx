@@ -159,7 +159,7 @@ const useStyles = makeStyles<DefaultTheme>(theme => ({
     display: 'flex',
   },
   specialButton: {
-    width: '12rem',
+    width: '10rem',
     height: '100%',
     fontSize: '2.5vh',
     marginLeft: '1rem',
@@ -173,7 +173,7 @@ const useStyles = makeStyles<DefaultTheme>(theme => ({
       backgroundColor: '#c1622a',
     },
     '@media (max-width: 1280px)': {
-      width: '10rem',
+      width: '15rem',
       margin: '0',
       marginTop: '1rem',
       marginBottom: '1rem',
@@ -194,7 +194,7 @@ const useStyles = makeStyles<DefaultTheme>(theme => ({
       borderBottom: '5px solid #233D91',
     },
     '@media (max-width: 1280px)': {
-      width: '10rem',
+      width: '15rem',
       margin: '0',
       marginTop: '1rem',
       marginBottom: '1rem',
@@ -228,7 +228,7 @@ const useStyles = makeStyles<DefaultTheme>(theme => ({
     border: '5px solid #233D91',
     boxShadow: 'none',
     zIndex: 10,
-    animation: `$bounceOutLeft 1s ${theme.transitions.easing.easeInOut}`,
+    animation: `$bounceOutLeft 1s`,
   },
   '@keyframes bounceOutLeft': {
     '0%': {

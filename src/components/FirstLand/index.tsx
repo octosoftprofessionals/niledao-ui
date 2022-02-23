@@ -53,7 +53,7 @@ const useStyles = makeStyles<DefaultTheme>({
       minHeight: '125vh',
     },
     '@media (max-width: 1000px)': {
-      minHeight: '105vh',
+      minHeight: '90vh',
     },
     '@media (max-width: 600px)': {
       minHeight: '80vh',
@@ -188,7 +188,7 @@ const useStyles = makeStyles<DefaultTheme>({
     display: 'flex',
     width: '80%',
     fontSize: '3vh',
-    fontWeight: 900,
+    fontWeight: 700,
     color: '#000F41',
     marginBottom: '1rem',
     marginTop: '1rem',
