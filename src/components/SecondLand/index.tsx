@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { Typography } from '@material-ui/core'
+import { Typography, Button } from '@material-ui/core'
 import { DefaultTheme } from '@material-ui/styles'
 import BigTree from '../../assets/BigTreeSecond.svg'
 import Tree from '../../assets/TreeSecond.svg'
@@ -9,7 +9,7 @@ export default function NavBar(props): JSX.Element {
   const classes = useStyles()
 
   return (
-    <div className={classes.root}>
+    <div id="aboutus" className={classes.root}>
       <div className={classes.blur}></div>
       <div className={classes.titleDiv}>
         <Typography className={classes.title}>
@@ -17,6 +17,9 @@ export default function NavBar(props): JSX.Element {
           blesses the land with abundance,
         </Typography>
         <Typography className={classes.title}>its floods bring prosperity and fertility ·</Typography>
+      </div>
+      <div className={classes.divSpecialButton}>
+        <Button className={classes.specialButton}>join waitlist</Button>
       </div>
       <div className={classes.container}>
         <div className={classes.treeDiv}>
@@ -92,7 +95,7 @@ const useStyles = makeStyles<DefaultTheme>({
       top: '155%',
     },
     '@media (max-width: 1000px)': {
-      top: '135%',
+      top: '125%',
     },
     '@media (max-width: 600px)': {
       top: '115%',
@@ -152,6 +155,31 @@ const useStyles = makeStyles<DefaultTheme>({
       fontSize: '2vh',
     },
   },
+  divSpecialButton: {
+    display: 'none',
+    '@media (max-width: 1280px)': {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: '100%',
+      marginBottom: '2rem',
+      marginTop: '2rem',
+    },
+  },
+  specialButton: {
+    width: '90%',
+    height: '100%',
+    fontSize: '2.5vh',
+    fontWeight: 900,
+    color: '#FFFFff',
+    backgroundColor: '#ED9700',
+    border: 'transparent',
+    borderRadius: '10px',
+    zIndex: 4,
+    '&:hover': {
+      backgroundColor: '#c1622a',
+    },
+  },
   container: {
     display: 'flex',
     width: '100%',
@@ -167,14 +195,14 @@ const useStyles = makeStyles<DefaultTheme>({
   treeDiv: {
     display: 'flex',
     width: '45%',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     justifyContent: 'flex-start',
     '@media (max-width: 1280px)': {
       display: 'none',
     },
   },
   tree: {
-    width: '100%',
+    width: '40rem',
   },
   textDiv: {
     display: 'flex',
@@ -182,7 +210,7 @@ const useStyles = makeStyles<DefaultTheme>({
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
     flexDirection: 'column',
-    marginLeft: '5rem',
+    marginLeft: '7rem',
     '@media (max-width: 1280px)': {
       marginLeft: '1rem',
       width: '90%',
@@ -213,6 +241,7 @@ const useStyles = makeStyles<DefaultTheme>({
   description: {
     fontSize: '3vh',
     color: '#233D91',
+    fontWeight: 900,
     lineHeight: '3rem',
     '@media (max-width: 1280px)': {
       fontSize: '2vh',
@@ -231,7 +260,7 @@ const useStyles = makeStyles<DefaultTheme>({
   },
   descriptionOrangeFirst: {
     fontSize: '3vh',
-    color: '#F4C066',
+    color: '#ED9700',
     lineHeight: '3rem',
     textTransform: 'uppercase',
     fontWeight: 900,
@@ -243,7 +272,7 @@ const useStyles = makeStyles<DefaultTheme>({
   },
   descriptionOrangeSecond: {
     fontSize: '3vh',
-    color: '#F4C066',
+    color: '#ED9700',
     lineHeight: '3rem',
     textTransform: 'uppercase',
     fontWeight: 900,

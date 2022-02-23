@@ -111,6 +111,7 @@ const useStyles = makeStyles<DefaultTheme>({
     zIndex: 1,
     '@media (max-width: 1280px)': {
       backgroundColor: 'transparent',
+      marginTop: '2rem',
     },
   },
   form: {

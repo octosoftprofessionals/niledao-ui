@@ -24,18 +24,26 @@ export default function Footer(): JSX.Element {
           <Typography variant="h6" className={classes.descriptionTitle}>
             LINKS
           </Typography>
-          <Typography variant="h6" className={classes.description}>
-            Home
-          </Typography>
-          <Typography variant="h6" className={classes.description}>
-            About Us
-          </Typography>
-          <Typography variant="h6" className={classes.description}>
-            The Cycle
-          </Typography>
-          <Typography variant="h6" className={classes.description}>
-            Contact Us
-          </Typography>
+          <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#home">
+            <Typography variant="h6" className={classes.description}>
+              Home
+            </Typography>
+          </a>
+          <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#aboutus">
+            <Typography variant="h6" className={classes.description}>
+              About Us
+            </Typography>
+          </a>
+          <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#cycle">
+            <Typography variant="h6" className={classes.description}>
+              The Cycle
+            </Typography>
+          </a>
+          <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#contactUs">
+            <Typography variant="h6" className={classes.description}>
+              Contact Us
+            </Typography>
+          </a>
         </div>
       </div>
     </div>
@@ -90,7 +98,7 @@ const useStyles = makeStyles<DefaultTheme>({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    width: '30%',
+    width: '50%',
     marginLeft: '10vh',
     marginRight: '10vh',
     '@media (max-width: 1280px)': {
@@ -100,6 +108,10 @@ const useStyles = makeStyles<DefaultTheme>({
       marginBottom: '3rem',
     },
   },
+  links: {
+    display: 'flex',
+    width: '100%',
+  },
   descriptionTitle: {
     display: 'flex',
     width: '100%',
@@ -107,15 +119,15 @@ const useStyles = makeStyles<DefaultTheme>({
     justifyContent: 'flex-start',
     color: '#FFFFFF',
     fontWeight: 900,
-    fontSize: '2.5vh',
+    fontSize: '3vh',
     '@media (max-width: 1280px)': {
-      fontSize: '2vh',
+      fontSize: '3vh',
     },
   },
   description: {
     display: 'flex',
     width: '100%',
-    fontWeight: 700,
+    fontWeight: 500,
     alignItems: 'center',
     justifyContent: 'flex-start',
     color: '#FFFFFF',

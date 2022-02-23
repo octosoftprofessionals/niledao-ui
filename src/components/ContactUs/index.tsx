@@ -9,7 +9,7 @@ export default function ContactUs(props): JSX.Element {
   const classes = useStyles()
 
   return (
-    <div className={classes.root}>
+    <div id="contactUs" className={classes.root}>
       <div className={classes.titleDiv}>
         <Typography variant="h1" className={classes.title}>
           CONTACT US
@@ -47,11 +47,11 @@ const useStyles = makeStyles<DefaultTheme>({
     },
   },
   title: {
-    marginLeft: '20vh',
+    marginLeft: '10vh',
     fontSize: '6vh',
     color: '#233D91',
     fontWeight: 900,
-    '@media (max-width: 1024px)': {
+    '@media (max-width: 1280px)': {
       marginLeft: '1rem',
       fontSize: '4vh',
     },

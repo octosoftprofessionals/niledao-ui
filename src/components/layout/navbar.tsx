@@ -20,14 +20,12 @@ export default function NavBar(props): JSX.Element {
   }
 
   useEffect(() => {
-    if (width < 1280) {
-      console.log(width)
+    if (width <= 1280) {
       setDropOpen(false)
       setFixDrop(false)
     }
   }, [width])
-  console.log(dropOpen)
-  console.log(fixDrop)
+
   return (
     <React.Fragment>
       <AppBar position="fixed" className={classes.appBar}>
@@ -38,10 +36,18 @@ export default function NavBar(props): JSX.Element {
           <div className={classes.divLinks}>
             {width > 1280 ? (
               <>
-                <Button className={classes.buttons}>home</Button>
-                <Button className={classes.buttons}>about us</Button>
-                <Button className={classes.buttons}>the cycle</Button>
-                <Button className={classes.buttons}>contact us</Button>
+                <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#home">
+                  <Button className={classes.buttons}>home</Button>
+                </a>
+                <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#aboutus">
+                  <Button className={classes.buttons}>about us</Button>
+                </a>
+                <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#cycle">
+                  <Button className={classes.buttons}>the cycle</Button>
+                </a>
+                <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#contactUs">
+                  <Button className={classes.buttons}>contact us</Button>
+                </a>
                 <Button className={classes.specialButton}>join waitlist</Button>
               </>
             ) : (
@@ -60,10 +66,18 @@ export default function NavBar(props): JSX.Element {
           </div>
           {width < 1280 && fixDrop ? (
             <div className={dropOpen ? classes.visible : classes.hidden}>
-              <Button className={classes.buttons}>home</Button>
-              <Button className={classes.buttons}>about us</Button>
-              <Button className={classes.buttons}>the cycle</Button>
-              <Button className={classes.buttons}>contact us</Button>
+              <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#home">
+                <Button className={classes.buttons}>home</Button>
+              </a>
+              <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#aboutus">
+                <Button className={classes.buttons}>about us</Button>
+              </a>
+              <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#cycle">
+                <Button className={classes.buttons}>the cycle</Button>
+              </a>
+              <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#contactUs">
+                <Button className={classes.buttons}>contact us</Button>
+              </a>
               <Button className={classes.specialButton}>join waitlist</Button>
             </div>
           ) : null}
@@ -141,6 +155,9 @@ const useStyles = makeStyles<DefaultTheme>(theme => ({
       width: '100%',
     },
   },
+  links: {
+    display: 'flex',
+  },
   specialButton: {
     width: '12rem',
     height: '100%',
@@ -158,6 +175,7 @@ const useStyles = makeStyles<DefaultTheme>(theme => ({
     '@media (max-width: 1280px)': {
       width: '10rem',
       margin: '0',
+      marginTop: '1rem',
       marginBottom: '1rem',
     },
   },
@@ -178,6 +196,7 @@ const useStyles = makeStyles<DefaultTheme>(theme => ({
     '@media (max-width: 1280px)': {
       width: '10rem',
       margin: '0',
+      marginTop: '1rem',
       marginBottom: '1rem',
     },
   },
@@ -191,7 +210,7 @@ const useStyles = makeStyles<DefaultTheme>(theme => ({
     height: 'fit-content',
     top: '13vh',
     backgroundColor: '#FFF6E7',
-    border: '5px solid #ED9700',
+    border: '5px solid #233D91',
     boxShadow: 'none',
     zIndex: 10,
     animation: `$bounceInLeft 1s`,
@@ -206,7 +225,7 @@ const useStyles = makeStyles<DefaultTheme>(theme => ({
     height: 'fit-content',
     top: '13vh',
     backgroundColor: '#FFF6E7',
-    border: '5px solid #ED9700',
+    border: '5px solid #233D91',
     boxShadow: 'none',
     zIndex: 10,
     animation: `$bounceOutLeft 1s ${theme.transitions.easing.easeInOut}`,

@@ -9,7 +9,7 @@ export default function ThirdLand(props): JSX.Element {
   const classes = useStyles()
 
   return (
-    <div className={classes.root}>
+    <div id="cycle" className={classes.root}>
       <div className={classes.titleDiv}>
         <img src={ImageTitle} alt="tree" className={classes.titleImage} />
         <Typography variant="h1" className={classes.title}>
@@ -112,7 +112,7 @@ const useStyles = makeStyles<DefaultTheme>({
   subtitleFoot: {
     display: 'flex',
     fontSize: '3vh',
-    fontWeight: 500,
+    fontWeight: 900,
     color: '#233D91',
     textTransform: 'uppercase',
     '@media (max-width: 600px)': {
@@ -122,7 +122,7 @@ const useStyles = makeStyles<DefaultTheme>({
   subtitleVariantFoot: {
     display: 'flex',
     fontSize: '3vh',
-    fontWeight: 500,
+    fontWeight: 900,
     color: '#6C8EFE',
     marginLeft: '0.5rem',
     marginRight: '0.5rem',

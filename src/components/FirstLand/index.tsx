@@ -11,7 +11,7 @@ export default function NavBar(props): JSX.Element {
   const classes = useStyles()
 
   return (
-    <div className={classes.root}>
+    <div id="home" className={classes.root}>
       <img src={Pyramid} className={classes.Pyramid} alt="Pyramid" />
       <img src={Ruby} className={classes.ruby} alt="ruby" />
       <img src={Lines} className={classes.Lines} alt="Lines" />
@@ -53,7 +53,7 @@ const useStyles = makeStyles<DefaultTheme>({
       minHeight: '125vh',
     },
     '@media (max-width: 1000px)': {
-      minHeight: '125vh',
+      minHeight: '105vh',
     },
     '@media (max-width: 600px)': {
       minHeight: '80vh',
@@ -112,10 +112,10 @@ const useStyles = makeStyles<DefaultTheme>({
     zIndex: 1,
     '@media (max-width: 1280px)': {
       paddingTop: '15vh',
-      height: '55vh',
+      height: '60vh',
     },
     '@media (max-width: 1000px)': {
-      height: '44vh',
+      height: '43vh',
       paddingTop: '10vh',
     },
     '@media (max-width: 600px)': {
@@ -188,7 +188,7 @@ const useStyles = makeStyles<DefaultTheme>({
     display: 'flex',
     width: '80%',
     fontSize: '3vh',
-    fontWeight: 500,
+    fontWeight: 900,
     color: '#000F41',
     marginBottom: '1rem',
     marginTop: '1rem',
