@@ -136,7 +136,7 @@ const useStyles = makeStyles<DefaultTheme>({
     fontWeight: 900,
     color: '#233D91',
     textTransform: 'uppercase',
-    '@media (max-width: 1280px)': {
+    '@media (max-width: 600px)': {
       fontSize: '2vh',
     },
   },
@@ -148,7 +148,7 @@ const useStyles = makeStyles<DefaultTheme>({
     marginLeft: '0.5rem',
     marginRight: '0.5rem',
     textTransform: 'uppercase',
-    '@media (max-width: 1280px)': {
+    '@media (max-width: 600px)': {
       fontSize: '2vh',
     },
   },

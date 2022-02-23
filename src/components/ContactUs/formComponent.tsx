@@ -189,6 +189,8 @@ const useStyles = makeStyles<DefaultTheme>({
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
     '@media (max-width: 1280px)': {
+      alignItems: 'center',
+      justifyContent: 'center',
       width: '100%',
     },
   },
