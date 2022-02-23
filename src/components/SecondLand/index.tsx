@@ -85,7 +85,7 @@ const useStyles = makeStyles<DefaultTheme>({
     display: 'flex',
     position: 'absolute',
     width: '100%',
-    height: '80rem',
+    height: '30%',
     top: '160%',
     right: '0',
     boxShadow: '1px -200px 159px 200px rgba(250,246,231,1)',

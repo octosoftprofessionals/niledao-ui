@@ -28,10 +28,10 @@ export default function Home({ children }: Props): JSX.Element {
 const useStyles = makeStyles<DefaultTheme>({
   image: {
     position: 'absolute',
-    top: '330%',
+    top: '345%',
     right: '0%',
     '@media (max-width: 1560px)': {
-      top: '340%',
+      top: '360%',
     },
     '@media (max-width: 1280px)': {
       display: 'none',
