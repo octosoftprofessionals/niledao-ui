@@ -88,7 +88,7 @@ const useStyles = makeStyles<DefaultTheme>({
     height: '30%',
     top: '160%',
     right: '0',
-    boxShadow: '1px -200px 159px 200px rgba(250,246,231,1)',
+    boxShadow: '1px -200px 159px 200px rgba(255, 246, 231,1)',
     zIndex: 3,
     '@media (max-width: 1280px)': {
       top: '155%',
@@ -179,7 +179,7 @@ const useStyles = makeStyles<DefaultTheme>({
     borderRadius: '10px',
     zIndex: 4,
     '&:hover': {
-      backgroundColor: '#c1622a',
+      backgroundColor: '#F4C066',
     },
   },
   container: {

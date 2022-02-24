@@ -207,7 +207,7 @@ const useStyles = makeStyles<DefaultTheme>({
     border: 'transparent',
     borderRadius: '10px',
     '&:hover': {
-      backgroundColor: '#c1622a',
+      backgroundColor: '#F4C066',
     },
     '@media (max-width: 1280px)': {
       width: '90%',

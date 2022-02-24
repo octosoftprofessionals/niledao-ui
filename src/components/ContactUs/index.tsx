@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import { Typography } from '@material-ui/core'
 import { DefaultTheme } from '@material-ui/styles'
 import Icon from '../../assets/IconContact.svg'
+import Image from '../../assets/contactResponsive.svg'
 import Form from './formComponent'
 
 export default function ContactUs(props): JSX.Element {
@@ -10,6 +11,10 @@ export default function ContactUs(props): JSX.Element {
 
   return (
     <div id="contactUs" className={classes.root}>
+      <div className={classes.image}>
+        <img src={Image} alt="Contact Us" className={classes.imageResponsive} />
+        <div className={classes.blur}></div>
+      </div>
       <div className={classes.titleDiv}>
         <Typography variant="h1" className={classes.title}>
           CONTACT US
@@ -34,6 +39,27 @@ const useStyles = makeStyles<DefaultTheme>({
     '@media (max-width: 1024px)': {
       backgroundColor: 'transparent',
     },
+  },
+  image: {
+    display: 'none',
+    '@media (max-width: 1024px)': {
+      display: 'flex',
+      width: '100%',
+      height: 'fit-content',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      marginBottom: '1rem',
+      marginTop: '1rem',
+    },
+  },
+  blur: {
+    display: 'flex',
+    width: '100%',
+    height: '5rem',
+    boxShadow: '1px -61px 47px 0px rgba(255, 246, 231,1)',
+    backgroundColor: '#FFF6E7',
+    zIndex: 5,
   },
   titleDiv: {
     display: 'flex',

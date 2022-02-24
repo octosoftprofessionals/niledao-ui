@@ -5,6 +5,7 @@ import useWindowSize from '../../utils/size'
 import { DefaultTheme } from '@material-ui/styles'
 import Logo from '../../assets/LogoNavBar.svg'
 import IconNavbar from '../../assets/IconNavbar.svg'
+import CloseNavbar from '../../assets/closeNavbar.svg'
 
 export default function NavBar(props): JSX.Element {
   const { width } = useWindowSize()
@@ -57,8 +58,8 @@ export default function NavBar(props): JSX.Element {
                     <img src={IconNavbar} alt="IconNavbar" className={classes.iconNavbar} />
                   </Button>
                 ) : (
-                  <Button className={classes.buttonResponsiveClose} onClick={() => handleDrop()}>
-                    <img src={IconNavbar} alt="IconNavbar" className={classes.iconNavbar} />
+                  <Button className={classes.buttonResponsive} onClick={() => handleDrop()}>
+                    <img src={CloseNavbar} alt="IconNavbar" className={classes.iconNavbarClose} />
                   </Button>
                 )}
               </>
@@ -66,9 +67,6 @@ export default function NavBar(props): JSX.Element {
           </div>
           {width < 1280 && fixDrop ? (
             <div className={dropOpen ? classes.visible : classes.hidden}>
-              <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#home">
-                <Button className={classes.buttons}>home</Button>
-              </a>
               <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#aboutus">
                 <Button className={classes.buttons}>about us</Button>
               </a>
@@ -78,7 +76,7 @@ export default function NavBar(props): JSX.Element {
               <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#contactUs">
                 <Button className={classes.buttons}>contact us</Button>
               </a>
-              <Button className={classes.specialButton}>join waitlist</Button>
+              <Button className={classes.buttons}>Waitlist</Button>
             </div>
           ) : null}
         </Toolbar>
@@ -98,7 +96,7 @@ const useStyles = makeStyles<DefaultTheme>(theme => ({
     backgroundPosition: 'center',
     backgroundSize: 'contain',
     transition: 'background-color 1s ease',
-    zIndex: 5,
+    zIndex: 15,
   },
   toolBar: {
     display: 'flex',
@@ -117,7 +115,10 @@ const useStyles = makeStyles<DefaultTheme>(theme => ({
     justifyContent: 'flex-start',
   },
   iconNavbar: {
-    width: '3rem',
+    width: '2.5rem',
+  },
+  iconNavbarClose: {
+    width: '5rem',
   },
   buttonResponsive: {
     width: '5rem',
@@ -125,20 +126,6 @@ const useStyles = makeStyles<DefaultTheme>(theme => ({
     marginLeft: '0.5rem',
     marginRight: '0.5rem',
     backgroundColor: 'transparent',
-    border: 'none',
-    transitionDuration: '1s',
-    '&:hover': {
-      backgroundColor: 'transparent',
-      opacity: 0.5,
-    },
-  },
-  buttonResponsiveClose: {
-    width: '5rem',
-    height: '10vh',
-    marginLeft: '0.5rem',
-    marginRight: '0.5rem',
-    backgroundColor: 'transparent',
-    transform: 'rotate(90deg)',
     border: 'none',
     transitionDuration: '1s',
     '&:hover': {
@@ -157,6 +144,9 @@ const useStyles = makeStyles<DefaultTheme>(theme => ({
   },
   links: {
     display: 'flex',
+    '@media (max-width: 1280px)': {
+      width: '100%',
+    },
   },
   specialButton: {
     width: '10rem',
@@ -170,7 +160,7 @@ const useStyles = makeStyles<DefaultTheme>(theme => ({
     border: 'transparent',
     borderRadius: '10px',
     '&:hover': {
-      backgroundColor: '#c1622a',
+      backgroundColor: '#F4C066',
     },
     '@media (max-width: 1280px)': {
       width: '15rem',
@@ -186,6 +176,7 @@ const useStyles = makeStyles<DefaultTheme>(theme => ({
     marginLeft: '0.5rem',
     marginRight: '0.5rem',
     fontWeight: 800,
+    borderRadius: '0px',
     color: '#233D91',
     backgroundColor: 'transparent',
     border: 'none',
@@ -194,10 +185,12 @@ const useStyles = makeStyles<DefaultTheme>(theme => ({
       borderBottom: '5px solid #233D91',
     },
     '@media (max-width: 1280px)': {
-      width: '15rem',
+      width: '100%',
       margin: '0',
-      marginTop: '1rem',
-      marginBottom: '1rem',
+      '&:hover': {
+        backgroundColor: '#F4C066',
+        border: 'none',
+      },
     },
   },
   visible: {
@@ -206,12 +199,12 @@ const useStyles = makeStyles<DefaultTheme>(theme => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '95%',
+    width: '65%',
     height: 'fit-content',
-    top: '13vh',
+    top: '12vh',
+    right: '0',
     backgroundColor: '#FFF6E7',
-    border: '5px solid #233D91',
-    boxShadow: 'none',
+    boxShadow: '-14px 21px 31px -6px rgba(0,0,0,0.5);',
     zIndex: 10,
     animation: `$bounceInLeft 1s`,
   },
@@ -221,12 +214,12 @@ const useStyles = makeStyles<DefaultTheme>(theme => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '95%',
+    width: '65%',
     height: 'fit-content',
-    top: '13vh',
+    top: '12vh',
+    right: '0',
     backgroundColor: '#FFF6E7',
-    border: '5px solid #233D91',
-    boxShadow: 'none',
+    boxShadow: '-14px 21px 31px -6px rgba(0,0,0,0.5);',
     zIndex: 10,
     animation: `$bounceOutLeft 1s`,
   },

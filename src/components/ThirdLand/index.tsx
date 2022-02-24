@@ -68,6 +68,9 @@ const useStyles = makeStyles<DefaultTheme>({
     marginTop: '1rem',
     height: 'fit-content',
     zIndex: 4,
+    '@media (max-width: 1280px)': {
+      marginTop: '1rem',
+    },
   },
   titleImage: {
     width: '4rem',
@@ -93,6 +96,7 @@ const useStyles = makeStyles<DefaultTheme>({
     height: 'fit-content',
     zIndex: 4,
     '@media (max-width: 1024px)': {
+      marginBottom: '1rem',
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
@@ -156,6 +160,7 @@ const useStyles = makeStyles<DefaultTheme>({
       alignItems: 'center',
       justifyContent: 'center',
       width: '100%',
+      marginBottom: '1rem',
     },
   },
 })
