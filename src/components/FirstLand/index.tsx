@@ -21,13 +21,9 @@ export default function NavBar(): JSX.Element {
             <img src={Tree} alt="logo" className={classes.logo} />
           </div>
           <div className={classes.titleDiv}>
-            <Typography variant="h1" className={classes.title}>
-              WELCOME TO NILE DAO
-            </Typography>
-            <Typography variant="h3" className={classes.subtitle}>
-              The first Tomb Fork on NEAR Protocol
-            </Typography>
-            <Typography variant="h5" className={classes.description}>
+            <Typography className={classes.title}>WELCOME TO NILE DAO</Typography>
+            <Typography className={classes.subtitle}>The first Tomb Fork on NEAR Protocol</Typography>
+            <Typography className={classes.description}>
               Stake your NILE along the river delta to earn rebates. Then stake your earned LOTUS to eran more NILE!
             </Typography>
           </div>

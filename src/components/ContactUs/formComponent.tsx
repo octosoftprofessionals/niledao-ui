@@ -1,37 +1,80 @@
-import React, { useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Button } from '@material-ui/core'
 import { DefaultTheme } from '@material-ui/styles'
-import emailjs from '@emailjs/browser'
+import { send } from 'emailjs-com'
 
 export default function ContactUs(): JSX.Element {
   const classes = useStyles()
 
-  const form = useRef()
+  const [data, setData] = useState({
+    user_id: '',
+    service_id: '',
+    template_id: '',
+  })
 
-  const sendEmail = (event: React.FormEvent<HTMLFormElement>): void => {
-    event.preventDefault()
+  const [information, setInformation] = useState({
+    user_name: '',
+    user_email: '',
+    message: '',
+    user_phone: '',
+    user_subject: '',
+  })
 
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_USER_ID').then(
-      result => {
-        console.log(result.text)
-      },
-      error => {
-        console.log(error.text)
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = {
+        user_id: process.env.REACT_APP_USER_ID,
+        service_id: process.env.REACT_APP_SERVICE_ID,
+        template_id: process.env.REACT_APP_TEMPLATE_ID,
       }
-    )
+      setData(result)
+    }
+    fetchData()
+  }, [])
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setInformation({ ...information, [event.target.name]: event.target.value })
+  }
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>): void => {
+    event.preventDefault()
+    await send(data.service_id, data.template_id, information, data.user_id)
+      .then(response => {
+        console.log('SUCCESS!', response.status, response.text)
+        alert('Your message has been sent!')
+      })
+      .catch(err => {
+        console.log('FAILED...', err)
+      })
+
+    setInformation({
+      user_name: '',
+      user_email: '',
+      message: '',
+      user_phone: '',
+      user_subject: '',
+    })
   }
 
   return (
     <div className={classes.root}>
-      <form className={classes.form} onSubmit={sendEmail}>
+      <form className={classes.form} onSubmit={handleSubmit}>
         <div className={classes.eachInput}>
           <label className={classes.label}>Full Name</label>
-          <input className={classes.input} name="user_name" type="text" placeholder="John Doe" required={true} />
+          <input
+            className={classes.input}
+            onChange={handleChange}
+            name="user_name"
+            type="text"
+            placeholder="John Doe"
+            required={true}
+          />
         </div>
         <div className={classes.eachInput}>
           <label className={classes.label}>Email</label>
           <input
+            onChange={handleChange}
             className={classes.input}
             name="user_email"
             type="email"
@@ -41,11 +84,19 @@ export default function ContactUs(): JSX.Element {
         </div>
         <div className={classes.eachInput}>
           <label className={classes.label}>Phone Number</label>
-          <input className={classes.input} name="user_phone" type="text" placeholder="+10000000000" required={true} />
+          <input
+            onChange={handleChange}
+            className={classes.input}
+            name="user_phone"
+            type="text"
+            placeholder="+10000000000"
+            required={true}
+          />
         </div>
         <div className={classes.eachInput}>
           <label className={classes.label}>Subject</label>
           <input
+            onChange={handleChange}
             className={classes.input}
             name="user_subject"
             type="text"
@@ -55,7 +106,12 @@ export default function ContactUs(): JSX.Element {
         </div>
         <div className={classes.eachInput}>
           <label className={classes.label}>Message</label>
-          <textarea className={classes.textarea} name="message" placeholder="How can we help you?" />
+          <textarea
+            onChange={handleChange}
+            className={classes.textarea}
+            name="message"
+            placeholder="How can we help you?"
+          />
         </div>
         <div className={classes.buttonDiv}>
           <Button className={classes.button} type="submit">

@@ -17,34 +17,22 @@ export default function Boxes(): JSX.Element {
         <Button className={classes.button}>
           <img src={IconOne} alt="icon" className={classes.icon} />
         </Button>
-        <Typography variant="h5" className={classes.title}>
-          THE FLOOD
-        </Typography>
-        <Typography variant="h6" className={classes.description}>
-          Acquire $NILE
-        </Typography>
+        <Typography className={classes.title}>THE FLOOD</Typography>
+        <Typography className={classes.description}>Acquire $NILE</Typography>
       </div>
       <div className={classes.boxes2}>
         <Button className={classes.button}>
           <img src={IconTwo} alt="icon" className={classes.icon} />
         </Button>
-        <Typography variant="h5" className={classes.title}>
-          CULTIVATION
-        </Typography>
-        <Typography variant="h6" className={classes.description}>
-          Stake $NILE
-        </Typography>
+        <Typography className={classes.title}>CULTIVATION</Typography>
+        <Typography className={classes.description}>Stake $NILE</Typography>
       </div>
       <div className={classes.boxes3}>
         <Button className={classes.button}>
           <img src={IconThree} alt="icon" className={classes.icon} />
         </Button>
-        <Typography variant="h5" className={classes.title}>
-          HARVEST
-        </Typography>
-        <Typography variant="h6" className={classes.description}>
-          Harvest $NILE
-        </Typography>
+        <Typography className={classes.title}>HARVEST</Typography>
+        <Typography className={classes.description}>Harvest $NILE</Typography>
       </div>
     </div>
   )

@@ -16,9 +16,7 @@ export default function ContactUs(): JSX.Element {
         <div className={classes.blur}></div>
       </div>
       <div className={classes.titleDiv}>
-        <Typography variant="h1" className={classes.title}>
-          CONTACT US
-        </Typography>
+        <Typography className={classes.title}>CONTACT US</Typography>
         <img src={Icon} alt="icon" className={classes.icon} />
       </div>
       <Form />

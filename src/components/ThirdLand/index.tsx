@@ -12,34 +12,24 @@ export default function ThirdLand(): JSX.Element {
     <div id="cycle" className={classes.root}>
       <div className={classes.titleDiv}>
         <img src={ImageTitle} alt="tree" className={classes.titleImage} />
-        <Typography variant="h1" className={classes.title}>
-          THE CYCLE
-        </Typography>
+        <Typography className={classes.title}>THE CYCLE</Typography>
         <div className={classes.subTitleDiv}>
-          <Typography variant="h1" className={classes.subtitle}>
+          <Typography className={classes.subtitle}>
             The
-            <Typography variant="h1" className={classes.subtitleVariant}>
-              Nile
-            </Typography>
+            <Typography className={classes.subtitleVariant}>Nile</Typography>
             has a cycle of three seasons;
           </Typography>
-          <Typography variant="h1" className={classes.subtitle}>
-            the flood, agriculture and harvest.
-          </Typography>
+          <Typography className={classes.subtitle}>the flood, agriculture and harvest.</Typography>
         </div>
       </div>
       <Boxes />
       <div className={classes.foot}>
-        <Typography variant="h6" className={classes.subtitleFoot}>
+        <Typography className={classes.subtitleFoot}>
           · The
-          <Typography variant="h6" className={classes.subtitleVariantFoot}>
-            Nile
-          </Typography>
+          <Typography className={classes.subtitleVariantFoot}>Nile</Typography>
           means life and this cycle
         </Typography>
-        <Typography variant="h6" className={classes.subtitleFoot}>
-          brought prosperity to people ·
-        </Typography>
+        <Typography className={classes.subtitleFoot}>brought prosperity to people ·</Typography>
       </div>
     </div>
   )

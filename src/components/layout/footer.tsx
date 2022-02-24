@@ -14,35 +14,25 @@ export default function Footer(): JSX.Element {
       </div>
       <div className={classes.threeColumns}>
         <div className={classes.column}>
-          <Typography variant="h6" className={classes.description}>
+          <Typography className={classes.description}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque bibendum nulla congue volutpat
             facilisis. Duis sodales fringilla mauris sed blandit. Nam gravida turpis in arcu sodales auctor. Duis tempus
             faucibus turpis, vitae bibendum neque pharetra sit amet. Morbi in faucibus augue.
           </Typography>
         </div>
         <div className={classes.column}>
-          <Typography variant="h6" className={classes.descriptionTitle}>
-            LINKS
-          </Typography>
+          <Typography className={classes.descriptionTitle}>LINKS</Typography>
           <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#home">
-            <Typography variant="h6" className={classes.description}>
-              Home
-            </Typography>
+            <Typography className={classes.description}>Home</Typography>
           </a>
           <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#aboutus">
-            <Typography variant="h6" className={classes.description}>
-              About Us
-            </Typography>
+            <Typography className={classes.description}>About Us</Typography>
           </a>
           <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#cycle">
-            <Typography variant="h6" className={classes.description}>
-              The Cycle
-            </Typography>
+            <Typography className={classes.description}>The Cycle</Typography>
           </a>
           <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#contactUs">
-            <Typography variant="h6" className={classes.description}>
-              Contact Us
-            </Typography>
+            <Typography className={classes.description}>Contact Us</Typography>
           </a>
         </div>
       </div>

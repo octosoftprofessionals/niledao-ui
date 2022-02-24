@@ -46,6 +46,9 @@ module.exports = {
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        serviceID: process.env.REACT_APP_SERVICE_ID,
+        templateID: process.env.REACT_APP_TEMPLATE_ID,
+        userID: process.env.REACT_APP_USER_ID,
       },
     },
     {

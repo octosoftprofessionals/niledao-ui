@@ -29,10 +29,8 @@ export default function NavBar(): JSX.Element {
           <div className={classes.auxDiv}>
             <img src={Tree} alt="tree" className={classes.treeSmall} />
           </div>
-          <Typography variant="h1" className={classes.subTitle}>
-            About Us
-          </Typography>
-          <Typography variant="h1" className={classes.description}>
+          <Typography className={classes.subTitle}>About Us</Typography>
+          <Typography className={classes.description}>
             The flood deposits rich fertile soil along the Nile, an area that was otherwise desert, now grows crops. The
             right amount of flood creates a rich and nourishing harvest, the Nile brings nutrients to the land, allowing
             for cultivation that yields bountiful harvests.
@@ -41,28 +39,24 @@ export default function NavBar(): JSX.Element {
       </div>
       <div className={classes.container}>
         <div className={classes.secondDiv}>
-          <Typography variant="h1" className={classes.descriptionOrangeFirst}>
+          <Typography className={classes.descriptionOrangeFirst}>
             Holding Nilecoin gets you access to new projects to fund, you become part of the flood. Your investment
             nourishes, cultivates and brings yields that you can harvest.
           </Typography>
         </div>
         <div className={classes.textDiv}>
-          <Typography variant="h1" className={classes.descriptionOrangeSecond}>
+          <Typography className={classes.descriptionOrangeSecond}>
             The Nile River Valley resembles a lotus flower, the ancient Egyptian symbol for the regeneration of life.
           </Typography>
         </div>
       </div>
       <div className={classes.titleDivFoot}>
-        <Typography variant="h1" className={classes.title}>
+        <Typography className={classes.title}>
           · The
-          <Typography variant="h1" className={classes.titleVariant}>
-            Nile
-          </Typography>
+          <Typography className={classes.titleVariant}>Nile</Typography>
           blesses the land with abundance,
         </Typography>
-        <Typography variant="h1" className={classes.title}>
-          its floods bring prosperity and fertility ·
-        </Typography>
+        <Typography className={classes.title}>its floods bring prosperity and fertility ·</Typography>
       </div>
     </div>
   )
