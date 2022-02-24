@@ -6,7 +6,7 @@ import Icon from '../../assets/IconContact.svg'
 import Image from '../../assets/contactResponsive.svg'
 import Form from './formComponent'
 
-export default function ContactUs(props): JSX.Element {
+export default function ContactUs(): JSX.Element {
   const classes = useStyles()
 
   return (

@@ -5,7 +5,7 @@ import { DefaultTheme } from '@material-ui/styles'
 import ImageTitle from '../../assets/TitleThird.svg'
 import Boxes from './boxes'
 
-export default function ThirdLand(props): JSX.Element {
+export default function ThirdLand(): JSX.Element {
   const classes = useStyles()
 
   return (

@@ -7,7 +7,7 @@ import Logo from '../../assets/LogoNavBar.svg'
 import IconNavbar from '../../assets/IconNavbar.svg'
 import CloseNavbar from '../../assets/closeNavbar.svg'
 
-export default function NavBar(props): JSX.Element {
+export default function NavBar(): JSX.Element {
   const { width } = useWindowSize()
 
   const [dropOpen, setDropOpen] = useState(false)
@@ -76,7 +76,7 @@ export default function NavBar(props): JSX.Element {
               <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#contactUs">
                 <Button className={classes.buttons}>contact us</Button>
               </a>
-              <Button className={classes.buttons}>Waitlist</Button>
+              <Button className={classes.specialButton}>Waitlist</Button>
             </div>
           ) : null}
         </Toolbar>
@@ -85,7 +85,7 @@ export default function NavBar(props): JSX.Element {
   )
 }
 
-const useStyles = makeStyles<DefaultTheme>(theme => ({
+const useStyles = makeStyles<DefaultTheme>({
   appBar: {
     display: 'flex',
     backgroundColor: '#FFF6E7',
@@ -163,10 +163,10 @@ const useStyles = makeStyles<DefaultTheme>(theme => ({
       backgroundColor: '#F4C066',
     },
     '@media (max-width: 1280px)': {
-      width: '15rem',
+      width: '100%',
+      height: '4rem',
       margin: '0',
-      marginTop: '1rem',
-      marginBottom: '1rem',
+      borderRadius: '0',
     },
   },
   buttons: {
@@ -186,11 +186,8 @@ const useStyles = makeStyles<DefaultTheme>(theme => ({
     },
     '@media (max-width: 1280px)': {
       width: '100%',
+      height: '4rem',
       margin: '0',
-      '&:hover': {
-        backgroundColor: '#F4C066',
-        border: 'none',
-      },
     },
   },
   visible: {
@@ -252,4 +249,4 @@ const useStyles = makeStyles<DefaultTheme>(theme => ({
       transform: 'translateX(0);',
     },
   },
-}))
+})

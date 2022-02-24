@@ -1,93 +1,61 @@
-import React, { useState } from 'react'
+import React, { useRef } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Button } from '@material-ui/core'
 import { DefaultTheme } from '@material-ui/styles'
+import emailjs from '@emailjs/browser'
 
-export default function ContactUs(props): JSX.Element {
+export default function ContactUs(): JSX.Element {
   const classes = useStyles()
 
-  const [information, setInformation] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: '',
-  })
+  const form = useRef()
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
-    setInformation({
-      ...information,
-      [event.target.name]: event.target.value,
-    })
-  }
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
+  const sendEmail = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault()
-    setInformation({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: '',
-    })
+
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_USER_ID').then(
+      result => {
+        console.log(result.text)
+      },
+      error => {
+        console.log(error.text)
+      }
+    )
   }
 
   return (
     <div className={classes.root}>
-      <form className={classes.form} onSubmit={() => handleSubmit}>
+      <form className={classes.form} onSubmit={sendEmail}>
         <div className={classes.eachInput}>
           <label className={classes.label}>Full Name</label>
-          <input
-            className={classes.input}
-            name="name"
-            type="text"
-            placeholder="John Doe"
-            onChange={handleChange}
-            required={true}
-          />
+          <input className={classes.input} name="user_name" type="text" placeholder="John Doe" required={true} />
         </div>
         <div className={classes.eachInput}>
           <label className={classes.label}>Email</label>
           <input
             className={classes.input}
-            name="email"
+            name="user_email"
             type="email"
             placeholder="name@email.com"
-            onChange={handleChange}
             required={true}
           />
         </div>
         <div className={classes.eachInput}>
           <label className={classes.label}>Phone Number</label>
-          <input
-            className={classes.input}
-            name="phone"
-            type="text"
-            placeholder="+10000000000"
-            onChange={handleChange}
-            required={true}
-          />
+          <input className={classes.input} name="user_phone" type="text" placeholder="+10000000000" required={true} />
         </div>
         <div className={classes.eachInput}>
           <label className={classes.label}>Subject</label>
           <input
             className={classes.input}
-            name="subject"
+            name="user_subject"
             type="text"
             placeholder="Stake proposal"
-            onChange={handleChange}
             required={true}
           />
         </div>
         <div className={classes.eachInput}>
           <label className={classes.label}>Message</label>
-          <textarea
-            className={classes.textarea}
-            name="message"
-            type="text"
-            placeholder="How can we help you?"
-            onChange={handleChange}
-          />
+          <textarea className={classes.textarea} name="message" placeholder="How can we help you?" />
         </div>
         <div className={classes.buttonDiv}>
           <Button className={classes.button} type="submit">

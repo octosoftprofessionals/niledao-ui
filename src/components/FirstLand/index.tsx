@@ -7,7 +7,7 @@ import Lines from '../../assets/FirstLines.svg'
 import Tree from '../../assets/Tree.svg'
 import Pyramid from '../../assets/PyramidFirst.svg'
 
-export default function NavBar(props): JSX.Element {
+export default function NavBar(): JSX.Element {
   const classes = useStyles()
 
   return (

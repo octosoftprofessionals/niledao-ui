@@ -5,7 +5,7 @@ import { DefaultTheme } from '@material-ui/styles'
 import BigTree from '../../assets/BigTreeSecond.svg'
 import Tree from '../../assets/TreeSecond.svg'
 
-export default function NavBar(props): JSX.Element {
+export default function NavBar(): JSX.Element {
   const classes = useStyles()
 
   return (

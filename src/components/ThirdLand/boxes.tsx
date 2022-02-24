@@ -9,7 +9,7 @@ import Box1 from '../../assets/Box1.svg'
 import Box2 from '../../assets/Box2.svg'
 import Box3 from '../../assets/Box3.svg'
 
-export default function Boxes(props): JSX.Element {
+export default function Boxes(): JSX.Element {
   const classes = useStyles()
   return (
     <div className={classes.root}>
