@@ -5,6 +5,7 @@ import { DefaultTheme } from '@material-ui/styles'
 import Icon from '../../assets/IconContact.svg'
 import Image from '../../assets/contactResponsive.svg'
 import Form from './formComponent'
+import ImageContact from '../../assets/ImageContact.svg'
 
 export default function ContactUs(): JSX.Element {
   const classes = useStyles()
@@ -16,8 +17,11 @@ export default function ContactUs(): JSX.Element {
         <div className={classes.blur}></div>
       </div>
       <div className={classes.titleDiv}>
-        <Typography className={classes.title}>CONTACT US</Typography>
-        <img src={Icon} alt="icon" className={classes.icon} />
+        <Typography className={classes.title}>
+          CONTACT US
+          <img src={Icon} alt="icon" className={classes.icon} />
+        </Typography>
+        <img src={ImageContact} alt="Contact Us" className={classes.imageBig} />
       </div>
       <Form />
     </div>
@@ -64,7 +68,7 @@ const useStyles = makeStyles<DefaultTheme>({
     width: '100%',
     height: 'fit-content',
     alignItems: 'center',
-    justifyContent: 'flex-start',
+    justifyContent: 'space-between',
     paddingTop: '10vh',
     '@media (max-width: 1024px)': {
       paddingTop: '0',
@@ -75,9 +79,17 @@ const useStyles = makeStyles<DefaultTheme>({
     fontSize: '6vh',
     color: '#233D91',
     fontWeight: 900,
-    '@media (max-width: 1280px)': {
+    '@media (max-width: 1024px)': {
       marginLeft: '1rem',
       fontSize: '4vh',
+    },
+  },
+  imageBig: {
+    display: 'flex',
+    position: 'absolute',
+    right: '0',
+    '@media (max-width: 1024px)': {
+      display: 'none',
     },
   },
   icon: {

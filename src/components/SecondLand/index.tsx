@@ -10,8 +10,8 @@ export default function NavBar(): JSX.Element {
 
   return (
     <div id="aboutus" className={classes.root}>
-      <div className={classes.blur}></div>
       <div className={classes.titleDiv}>
+        <div className={classes.blur}></div>
         <Typography className={classes.title}>
           · The <Typography className={classes.titleVariant}>Nile</Typography>
           blesses the land with abundance,
@@ -77,24 +77,19 @@ const useStyles = makeStyles<DefaultTheme>({
   },
   blur: {
     display: 'flex',
-    position: 'absolute',
     width: '100%',
-    height: '30%',
-    top: '160%',
     right: '0',
-    boxShadow: '1px -200px 159px 200px rgba(255, 246, 231,1)',
-    zIndex: 3,
+    position: 'absolute',
+    height: '20rem',
+    backgroundColor: '#FFF6E7',
+    boxShadow: '0px -100px 50px 100px rgba(255, 246, 231,1)',
+    zIndex: 5,
     '@media (max-width: 1280px)': {
-      top: '155%',
+      height: '5rem',
+      boxShadow: '0px -80px 50px 80px rgba(255, 246, 231,1)',
     },
     '@media (max-width: 1000px)': {
-      top: '135%',
-    },
-    '@media (max-width: 750px)': {
-      top: '125%',
-    },
-    '@media (max-width: 600px)': {
-      top: '115%',
+      height: '3rem',
     },
   },
   titleDiv: {
@@ -103,6 +98,7 @@ const useStyles = makeStyles<DefaultTheme>({
     justifyContent: 'center',
     textAlign: 'center',
     width: '100%',
+    flexDirection: 'column',
     marginBottom: '2rem',
     marginTop: '1rem',
     zIndex: 4,
@@ -133,6 +129,8 @@ const useStyles = makeStyles<DefaultTheme>({
     display: 'flex',
     fontSize: '3vh',
     fontWeight: 900,
+    marginTop: '3rem',
+    zIndex: 5,
     color: '#233D91',
     textTransform: 'uppercase',
     '@media (max-width: 600px)': {

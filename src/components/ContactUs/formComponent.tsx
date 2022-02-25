@@ -133,7 +133,7 @@ const useStyles = makeStyles<DefaultTheme>({
     backgroundColor: '#FBEACC',
     marginTop: '10vh',
     zIndex: 1,
-    '@media (max-width: 1280px)': {
+    '@media (max-width: 1024px)': {
       backgroundColor: 'transparent',
       marginTop: '2rem',
     },
@@ -146,7 +146,7 @@ const useStyles = makeStyles<DefaultTheme>({
     alignItems: 'center',
     justifyContent: 'flex-start',
     flexDirection: 'column',
-    '@media (max-width: 1280px)': {
+    '@media (max-width: 1024px)': {
       width: '100%',
       flexWrap: 'nowrap',
       height: 'fit-content',
@@ -160,7 +160,7 @@ const useStyles = makeStyles<DefaultTheme>({
     justifyContent: 'flex-start',
     flexDirection: 'column',
     marginBottom: '2rem',
-    '@media (max-width: 1280px)': {
+    '@media (max-width: 1024px)': {
       width: '90%',
     },
   },
@@ -184,7 +184,7 @@ const useStyles = makeStyles<DefaultTheme>({
     '&::placeholder': {
       color: '#ED9700',
     },
-    '@media (max-width: 1280px)': {
+    '@media (max-width: 1024px)': {
       width: '100%',
     },
   },
@@ -203,7 +203,7 @@ const useStyles = makeStyles<DefaultTheme>({
     '&::placeholder': {
       color: '#ED9700',
     },
-    '@media (max-width: 1280px)': {
+    '@media (max-width: 1024px)': {
       width: '100%',
     },
   },
@@ -213,7 +213,7 @@ const useStyles = makeStyles<DefaultTheme>({
     height: 'fit-content',
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
-    '@media (max-width: 1280px)': {
+    '@media (max-width: 1024px)': {
       alignItems: 'center',
       justifyContent: 'center',
       width: '100%',
@@ -233,7 +233,7 @@ const useStyles = makeStyles<DefaultTheme>({
     '&:hover': {
       backgroundColor: '#F4C066',
     },
-    '@media (max-width: 1280px)': {
+    '@media (max-width: 1024px)': {
       width: '90%',
     },
   },
