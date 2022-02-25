@@ -49,7 +49,9 @@ export default function NavBar(): JSX.Element {
                 <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#contactUs">
                   <Button className={classes.buttons}>contact us</Button>
                 </a>
-                <Button className={classes.specialButton}>join waitlist</Button>
+                <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="">
+                  <Button className={classes.specialButton}>join waitlist</Button>
+                </a>
               </>
             ) : (
               <>
