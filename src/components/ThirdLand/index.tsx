@@ -14,22 +14,30 @@ export default function ThirdLand(): JSX.Element {
         <img src={ImageTitle} alt="tree" className={classes.titleImage} />
         <Typography className={classes.title}>THE CYCLE</Typography>
         <div className={classes.subTitleDiv}>
-          <Typography className={classes.subtitle}>
-            The
-            <Typography className={classes.subtitleVariant}>Nile</Typography>
-            has a cycle of three seasons;
-          </Typography>
-          <Typography className={classes.subtitle}>the flood, agriculture and harvest.</Typography>
+          <div className={classes.firstPart}>
+            <Typography className={classes.subtitle}>
+              The
+              <Typography className={classes.subtitleVariant}>Nile</Typography>
+              has a cycle of three seasons;
+            </Typography>
+          </div>
+          <div className={classes.secondPart}>
+            <Typography className={classes.subtitle}>the flood, agriculture and harvest.</Typography>
+          </div>
         </div>
       </div>
       <Boxes />
       <div className={classes.foot}>
-        <Typography className={classes.subtitleFoot}>
-          · The
-          <Typography className={classes.subtitleVariantFoot}>Nile</Typography>
-          means life and this cycle
-        </Typography>
-        <Typography className={classes.subtitleFoot}>brought prosperity to people ·</Typography>
+        <div className={classes.firstPart}>
+          <Typography className={classes.subtitleFoot}>
+            · The
+            <Typography className={classes.subtitleVariantFoot}>Nile</Typography>
+            means life and this cycle
+          </Typography>
+        </div>
+        <div className={classes.secondPart}>
+          <Typography className={classes.subtitleFoot}>brought prosperity to people ·</Typography>
+        </div>
       </div>
     </div>
   )
@@ -60,6 +68,30 @@ const useStyles = makeStyles<DefaultTheme>({
     zIndex: 4,
     '@media (max-width: 1280px)': {
       marginTop: '1rem',
+    },
+  },
+  firstPart: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    textAlign: 'center',
+    margin: '0',
+    padding: '0',
+    width: 'fit-content',
+    height: 'fit-content',
+  },
+  secondPart: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    textAlign: 'center',
+    width: 'fit-content',
+    height: 'fit-content',
+    margin: '0',
+    padding: '0',
+    marginLeft: '0.5rem',
+    '@media (max-width: 1280px)': {
+      margin: '0',
     },
   },
   titleImage: {

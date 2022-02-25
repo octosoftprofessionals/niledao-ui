@@ -12,16 +12,18 @@ export default function NavBar(): JSX.Element {
     <div id="aboutus" className={classes.root}>
       <div className={classes.upSecond}>
         <div className={classes.blur}></div>
-
         <div className={classes.titleDiv}>
-          <Typography className={classes.title}>
-            · The <Typography className={classes.titleVariant}>Nile</Typography>
-            blesses the land with abundance,
-          </Typography>
-          <Typography className={classes.title}>its floods bring prosperity and fertility ·</Typography>
+          <div className={classes.firstPart}>
+            <Typography className={classes.title}>
+              · The <Typography className={classes.titleVariant}>Nile</Typography>
+              blesses the land with abundance,
+            </Typography>
+          </div>
+          <div className={classes.secondPart}>
+            <Typography className={classes.title}>its floods bring prosperity and fertility ·</Typography>
+          </div>
         </div>
       </div>
-
       <div className={classes.divSpecialButton}>
         <Button className={classes.specialButton}>join waitlist</Button>
       </div>
@@ -55,12 +57,16 @@ export default function NavBar(): JSX.Element {
         </div>
       </div>
       <div className={classes.titleDivFoot}>
-        <Typography className={classes.title}>
-          · The
-          <Typography className={classes.titleVariant}>Nile</Typography>
-          blesses the land with abundance,
-        </Typography>
-        <Typography className={classes.title}>its floods bring prosperity and fertility ·</Typography>
+        <div className={classes.firstPart}>
+          <Typography className={classes.title}>
+            · The
+            <Typography className={classes.titleVariant}>Nile</Typography>
+            blesses the land with abundance,
+          </Typography>
+        </div>
+        <div className={classes.secondPart}>
+          <Typography className={classes.title}>its floods bring prosperity and fertility ·</Typography>
+        </div>
       </div>
     </div>
   )
@@ -122,6 +128,30 @@ const useStyles = makeStyles<DefaultTheme>({
       width: '100%',
     },
   },
+  firstPart: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    textAlign: 'center',
+    margin: '0',
+    padding: '0',
+    width: 'fit-content',
+    height: 'fit-content',
+  },
+  secondPart: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    textAlign: 'center',
+    width: 'fit-content',
+    height: 'fit-content',
+    margin: '0',
+    padding: '0',
+    marginLeft: '2rem',
+    '@media (max-width: 1280px)': {
+      margin: '0',
+    },
+  },
   titleDivFoot: {
     display: 'flex',
     alignItems: 'center',
@@ -142,6 +172,7 @@ const useStyles = makeStyles<DefaultTheme>({
     display: 'flex',
     fontSize: '3vh',
     fontWeight: 900,
+    margin: '0',
     marginTop: '3rem',
     zIndex: 6,
     color: '#233D91',
@@ -155,6 +186,7 @@ const useStyles = makeStyles<DefaultTheme>({
     fontSize: '3vh',
     fontWeight: 900,
     color: '#6C8EFE',
+    margin: '0',
     marginLeft: '0.5rem',
     marginRight: '0.5rem',
     zIndex: 6,
