@@ -38,7 +38,6 @@ const useStyles = makeStyles<DefaultTheme>({
     display: 'flex',
     width: '100%',
     height: 'fit-content',
-    marginBottom: '5rem',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'flex-start',
@@ -51,6 +50,7 @@ const useStyles = makeStyles<DefaultTheme>({
     margin: '0 0 0 0',
     padding: '0 0 0 0',
     zIndex: 2,
+    borderBottom: '30px solid #FFF6E7',
   },
   ruby: {
     width: '30%',
@@ -74,6 +74,8 @@ const useStyles = makeStyles<DefaultTheme>({
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
     zIndex: 1,
+    backgroundColor: '#F4C066',
+
   },
   divSeparate: {
     display: 'flex',
@@ -82,8 +84,10 @@ const useStyles = makeStyles<DefaultTheme>({
     justifyContent: 'center',
     width: '100%',
     height: 'fit-content',
+    padding: '0 0 0 0',
+    margin: '0 0 0 0',
     paddingTop: '20vh',
-    backgroundColor: '#F4C066',
+
   },
   auxDiv: {
     display: 'flex',

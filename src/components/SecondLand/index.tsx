@@ -10,14 +10,18 @@ export default function NavBar(): JSX.Element {
 
   return (
     <div id="aboutus" className={classes.root}>
-      <div className={classes.titleDiv}>
+      <div className={classes.upSecond}>
         <div className={classes.blur}></div>
-        <Typography className={classes.title}>
-          · The <Typography className={classes.titleVariant}>Nile</Typography>
-          blesses the land with abundance,
-        </Typography>
-        <Typography className={classes.title}>its floods bring prosperity and fertility ·</Typography>
+
+        <div className={classes.titleDiv}>
+          <Typography className={classes.title}>
+            · The <Typography className={classes.titleVariant}>Nile</Typography>
+            blesses the land with abundance,
+          </Typography>
+          <Typography className={classes.title}>its floods bring prosperity and fertility ·</Typography>
+        </div>
       </div>
+
       <div className={classes.divSpecialButton}>
         <Button className={classes.specialButton}>join waitlist</Button>
       </div>
@@ -68,6 +72,7 @@ const useStyles = makeStyles<DefaultTheme>({
     minHeight: '100vh',
     height: 'fit-content',
     flexDirection: 'column',
+    paddingTop: '10rem',
     alignItems: 'center',
     justifyContent: 'flex-start',
     zIndex: 1,
@@ -80,17 +85,25 @@ const useStyles = makeStyles<DefaultTheme>({
     width: '100%',
     right: '0',
     position: 'absolute',
-    height: '20rem',
+    height: '30%',
     backgroundColor: '#FFF6E7',
-    boxShadow: '0px -100px 50px 100px rgba(255, 246, 231,1)',
+    boxShadow: '1px -200px 120px 50px rgba(255, 246, 231,1)',
     zIndex: 5,
     '@media (max-width: 1280px)': {
-      height: '5rem',
-      boxShadow: '0px -80px 50px 80px rgba(255, 246, 231,1)',
+      height: '30%',
     },
     '@media (max-width: 1000px)': {
-      height: '3rem',
+      height: '30%',
     },
+  },
+  upSecond: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    textAlign: 'center',
+    width: '100%',
+    height: 'fit-content',
+    flexDirection: 'column',
   },
   titleDiv: {
     display: 'flex',
@@ -98,10 +111,10 @@ const useStyles = makeStyles<DefaultTheme>({
     justifyContent: 'center',
     textAlign: 'center',
     width: '100%',
-    flexDirection: 'column',
+    flexDirection: 'row',
     marginBottom: '2rem',
     marginTop: '1rem',
-    zIndex: 4,
+    zIndex: 10,
     '@media (max-width: 1280px)': {
       flexDirection: 'column',
       alignItems: 'center',
@@ -117,7 +130,7 @@ const useStyles = makeStyles<DefaultTheme>({
     marginBottom: '3rem',
     marginTop: '3rem',
     height: 'fit-content',
-    zIndex: 4,
+    zIndex: 10,
     '@media (max-width: 1280px)': {
       flexDirection: 'column',
       alignItems: 'center',
@@ -130,7 +143,7 @@ const useStyles = makeStyles<DefaultTheme>({
     fontSize: '3vh',
     fontWeight: 900,
     marginTop: '3rem',
-    zIndex: 5,
+    zIndex: 6,
     color: '#233D91',
     textTransform: 'uppercase',
     '@media (max-width: 600px)': {
@@ -144,6 +157,7 @@ const useStyles = makeStyles<DefaultTheme>({
     color: '#6C8EFE',
     marginLeft: '0.5rem',
     marginRight: '0.5rem',
+    zIndex: 6,
     textTransform: 'uppercase',
     '@media (max-width: 600px)': {
       fontSize: '2vh',
@@ -152,6 +166,7 @@ const useStyles = makeStyles<DefaultTheme>({
   divSpecialButton: {
     display: 'none',
     '@media (max-width: 1280px)': {
+      zIndex: 10,
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -181,7 +196,7 @@ const useStyles = makeStyles<DefaultTheme>({
     marginTop: '2rem',
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
-    zIndex: 4,
+    zIndex: 10,
     '@media (max-width: 1280px)': {
       flexDirection: 'column',
     },
