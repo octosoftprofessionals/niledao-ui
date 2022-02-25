@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles'
 import { Typography } from '@material-ui/core'
 import { DefaultTheme } from '@material-ui/styles'
 import Ruby from '../../assets/Ruby.svg'
-import Lines from '../../assets/FirstLines.svg'
 import Tree from '../../assets/Tree.svg'
 import Pyramid from '../../assets/PyramidFirst.svg'
 
@@ -12,21 +11,22 @@ export default function NavBar(): JSX.Element {
 
   return (
     <div id="home" className={classes.root}>
-      <img src={Pyramid} className={classes.Pyramid} alt="Pyramid" />
-      <img src={Ruby} className={classes.ruby} alt="ruby" />
-      <img src={Lines} className={classes.Lines} alt="Lines" />
       <div className={classes.container}>
-        <div className={classes.auxDiv}>
-          <div className={classes.logoDiv}>
-            <img src={Tree} alt="logo" className={classes.logo} />
+        <div className={classes.divSeparate}>
+          <div className={classes.auxDiv}>
+            <div className={classes.logoDiv}>
+              <img src={Tree} alt="logo" className={classes.logo} />
+            </div>
+            <div className={classes.titleDiv}>
+              <Typography className={classes.title}>WELCOME TO NILE DAO</Typography>
+              <Typography className={classes.subtitle}>The first Tomb Fork on NEAR Protocol</Typography>
+              <Typography className={classes.description}>
+                Stake your NILE along the river delta to earn rebates. Then stake your earned LOTUS to eran more NILE!
+              </Typography>
+            </div>
+            <img src={Ruby} className={classes.ruby} alt="ruby" />
           </div>
-          <div className={classes.titleDiv}>
-            <Typography className={classes.title}>WELCOME TO NILE DAO</Typography>
-            <Typography className={classes.subtitle}>The first Tomb Fork on NEAR Protocol</Typography>
-            <Typography className={classes.description}>
-              Stake your NILE along the river delta to earn rebates. Then stake your earned LOTUS to eran more NILE!
-            </Typography>
-          </div>
+          <img src={Pyramid} className={classes.Pyramid} alt="Pyramid" />
         </div>
       </div>
     </div>
@@ -37,86 +37,53 @@ const useStyles = makeStyles<DefaultTheme>({
   root: {
     display: 'flex',
     width: '100%',
-    minHeight: '125vh',
     height: 'fit-content',
-    paddingTop: '12vh',
+    marginBottom: '5rem',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'flex-start',
     zIndex: 1,
     overflow: 'hidden',
-    '@media (max-width: 1280px)': {
-      minHeight: '125vh',
-    },
-    '@media (max-width: 1000px)': {
-      minHeight: '90vh',
-    },
-    '@media (max-width: 600px)': {
-      minHeight: '80vh',
-    },
   },
   Pyramid: {
-    position: 'absolute',
     width: '100%',
-    height: '100%',
-    top: '30%',
-    right: '0',
+    height: 'fit-content',
+    margin: '0 0 0 0',
+    padding: '0 0 0 0',
     zIndex: 2,
-    '@media (max-width: 1280px)': {
-      top: '30%',
-    },
-    '@media (max-width: 1000px)': {
-      top: '10%',
-    },
   },
   ruby: {
-    width: '36%',
-    position: 'absolute',
-    top: '45%',
-    right: '17%',
+    width: '30%',
     zIndex: 3,
+    position: 'absolute',
+    right: '20%',
+    top: '30%',
     '@media (max-width: 1280px)': {
-      width: '50%',
       top: '40%',
-      right: '0',
-    },
-    '@media (max-width: 1000px)': {
-      width: '60%',
-      top: '30%',
     },
     '@media (max-width: 600px)': {
-      top: '43%',
-    },
-  },
-  Lines: {
-    position: 'absolute',
-    top: '70%',
-    left: '10%',
-    zIndex: 2,
-    '@media (max-width: 1280px)': {
-      display: 'none',
+      right: '0',
+      width: '40%',
+      top: '50%',
     },
   },
   container: {
     display: 'flex',
     width: '100%',
-    height: '65vh',
+    height: 'fit-content',
     alignItems: 'flex-start',
-    paddingTop: '15vh',
     justifyContent: 'flex-start',
-    backgroundColor: '#F4C066',
     zIndex: 1,
-    '@media (max-width: 1280px)': {
-      paddingTop: '15vh',
-      height: '60vh',
-    },
-    '@media (max-width: 1000px)': {
-      height: '43vh',
-      paddingTop: '10vh',
-    },
-    '@media (max-width: 600px)': {
-      height: '40vh',
-    },
+  },
+  divSeparate: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+    height: 'fit-content',
+    paddingTop: '20vh',
+    backgroundColor: '#F4C066',
   },
   auxDiv: {
     display: 'flex',
@@ -124,6 +91,7 @@ const useStyles = makeStyles<DefaultTheme>({
     height: 'fit-content',
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
+    flexDirection: 'row',
     paddingLeft: '5vh',
     '@media (max-width: 1280px)': {
       paddingLeft: '1rem',
