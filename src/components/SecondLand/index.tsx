@@ -147,7 +147,7 @@ const useStyles = makeStyles<DefaultTheme>({
     height: 'fit-content',
     margin: '0',
     padding: '0',
-    marginLeft: '2rem',
+    marginLeft: '0.5rem',
     '@media (max-width: 1280px)': {
       margin: '0',
     },
