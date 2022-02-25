@@ -13,6 +13,8 @@ export default function ContactUs(): JSX.Element {
     template_id: '',
   })
 
+  console.log(data)
+
   const [information, setInformation] = useState({
     user_name: '',
     user_email: '',

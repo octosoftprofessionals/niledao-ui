@@ -75,7 +75,6 @@ const useStyles = makeStyles<DefaultTheme>({
     justifyContent: 'flex-start',
     zIndex: 1,
     backgroundColor: '#F4C066',
-
   },
   divSeparate: {
     display: 'flex',
@@ -87,7 +86,6 @@ const useStyles = makeStyles<DefaultTheme>({
     padding: '0 0 0 0',
     margin: '0 0 0 0',
     paddingTop: '20vh',
-
   },
   auxDiv: {
     display: 'flex',
