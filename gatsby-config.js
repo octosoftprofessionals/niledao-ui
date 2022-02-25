@@ -4,14 +4,14 @@ dotenv.config()
 
 module.exports = {
   siteMetadata: {
-    title: ` Gatsby Typescript materialui Contentful Boilerplate`,
-    siteUrl: `https://ersanyamarya.github.io/gatsby-typescript-materialui-contentful-boilerplate/`,
-    description: `Gatsby Boilerplate with Typescript`,
-    titleTemplate: '%s · Boiler Plate',
-    url: `https://www.sanyamarya.com`,
+    title: `Nile DAO`,
+    siteUrl: `www.localhost:8000.com`,
+    description: `Nile web page`,
+    titleTemplate: '%s · Nile',
+    url: ``,
     image: '/images/logo.png',
     owner: 'Boiler Plate',
-    twitterUsername: '@sanyamarya',
+    twitterUsername: '',
     facebookAppID: '',
   },
   pathPrefix: '/gatsby-typescript-materialui-contentful-boilerplate',
@@ -46,6 +46,9 @@ module.exports = {
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        serviceID: process.env.REACT_APP_SERVICE_ID,
+        templateID: process.env.REACT_APP_TEMPLATE_ID,
+        userID: process.env.REACT_APP_USER_ID,
       },
     },
     {

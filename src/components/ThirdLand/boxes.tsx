@@ -9,7 +9,7 @@ import Box1 from '../../assets/Box1.svg'
 import Box2 from '../../assets/Box2.svg'
 import Box3 from '../../assets/Box3.svg'
 
-export default function Boxes(props): JSX.Element {
+export default function Boxes(): JSX.Element {
   const classes = useStyles()
   return (
     <div className={classes.root}>
@@ -17,34 +17,22 @@ export default function Boxes(props): JSX.Element {
         <Button className={classes.button}>
           <img src={IconOne} alt="icon" className={classes.icon} />
         </Button>
-        <Typography variant="h5" className={classes.title}>
-          THE FLOOD
-        </Typography>
-        <Typography variant="h6" className={classes.description}>
-          Acquire $NILE
-        </Typography>
+        <Typography className={classes.title}>THE FLOOD</Typography>
+        <Typography className={classes.description}>Acquire $NILE</Typography>
       </div>
       <div className={classes.boxes2}>
         <Button className={classes.button}>
           <img src={IconTwo} alt="icon" className={classes.icon} />
         </Button>
-        <Typography variant="h5" className={classes.title}>
-          CULTIVATION
-        </Typography>
-        <Typography variant="h6" className={classes.description}>
-          Stake $NILE
-        </Typography>
+        <Typography className={classes.title}>CULTIVATION</Typography>
+        <Typography className={classes.description}>Stake $NILE</Typography>
       </div>
       <div className={classes.boxes3}>
         <Button className={classes.button}>
           <img src={IconThree} alt="icon" className={classes.icon} />
         </Button>
-        <Typography variant="h5" className={classes.title}>
-          HARVEST
-        </Typography>
-        <Typography variant="h6" className={classes.description}>
-          Harvest $NILE
-        </Typography>
+        <Typography className={classes.title}>HARVEST</Typography>
+        <Typography className={classes.description}>Harvest $NILE</Typography>
       </div>
     </div>
   )
@@ -74,6 +62,9 @@ const useStyles = makeStyles<DefaultTheme>({
     backgroundColor: '#FBEACC',
     margin: '1rem',
     borderRadius: '20px',
+    '@media (max-width: 1024px)': {
+      width: '90%',
+    },
   },
   boxes2: {
     display: 'flex',
@@ -89,6 +80,9 @@ const useStyles = makeStyles<DefaultTheme>({
     backgroundColor: '#FBEACC',
     margin: '1rem',
     borderRadius: '20px',
+    '@media (max-width: 1024px)': {
+      width: '90%',
+    },
   },
   boxes3: {
     display: 'flex',
@@ -104,6 +98,9 @@ const useStyles = makeStyles<DefaultTheme>({
     backgroundColor: '#FBEACC',
     margin: '1rem',
     borderRadius: '20px',
+    '@media (max-width: 1024px)': {
+      width: '90%',
+    },
   },
   button: {
     width: '7rem',

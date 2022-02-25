@@ -5,39 +5,31 @@ import { DefaultTheme } from '@material-ui/styles'
 import ImageTitle from '../../assets/TitleThird.svg'
 import Boxes from './boxes'
 
-export default function ThirdLand(props): JSX.Element {
+export default function ThirdLand(): JSX.Element {
   const classes = useStyles()
 
   return (
-    <div className={classes.root}>
+    <div id="cycle" className={classes.root}>
       <div className={classes.titleDiv}>
         <img src={ImageTitle} alt="tree" className={classes.titleImage} />
-        <Typography variant="h1" className={classes.title}>
-          THE CYCLE
-        </Typography>
+        <Typography className={classes.title}>THE CYCLE</Typography>
         <div className={classes.subTitleDiv}>
-          <Typography variant="h1" className={classes.subtitle}>
+          <Typography className={classes.subtitle}>
             The
+            <Typography className={classes.subtitleVariant}>Nile</Typography>
+            has a cycle of three seasons;
           </Typography>
-          <Typography variant="h1" className={classes.subtitleVariant}>
-            Nile
-          </Typography>
-          <Typography variant="h1" className={classes.subtitle}>
-            has a cycle of three seasons; the flood, agriculture and harvest.
-          </Typography>
+          <Typography className={classes.subtitle}>the flood, agriculture and harvest.</Typography>
         </div>
       </div>
       <Boxes />
       <div className={classes.foot}>
-        <Typography variant="h6" className={classes.subtitleFoot}>
+        <Typography className={classes.subtitleFoot}>
           · The
+          <Typography className={classes.subtitleVariantFoot}>Nile</Typography>
+          means life and this cycle
         </Typography>
-        <Typography variant="h6" className={classes.subtitleVariantFoot}>
-          Nile
-        </Typography>
-        <Typography variant="h6" className={classes.subtitleFoot}>
-          means life and this cycle brought prosperity to people ·
-        </Typography>
+        <Typography className={classes.subtitleFoot}>brought prosperity to people ·</Typography>
       </div>
     </div>
   )
@@ -52,6 +44,9 @@ const useStyles = makeStyles<DefaultTheme>({
     alignItems: 'center',
     justifyContent: 'flex-start',
     zIndex: 1,
+    '@media (max-width: 1280px)': {
+      minHeight: 'fit-content',
+    },
   },
   titleDiv: {
     display: 'flex',
@@ -63,6 +58,9 @@ const useStyles = makeStyles<DefaultTheme>({
     marginTop: '1rem',
     height: 'fit-content',
     zIndex: 4,
+    '@media (max-width: 1280px)': {
+      marginTop: '1rem',
+    },
   },
   titleImage: {
     width: '4rem',
@@ -87,34 +85,57 @@ const useStyles = makeStyles<DefaultTheme>({
     marginBottom: '5rem',
     height: 'fit-content',
     zIndex: 4,
+    '@media (max-width: 1024px)': {
+      marginBottom: '1rem',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: '100%',
+    },
   },
   subtitle: {
+    display: 'flex',
     fontSize: '3vh',
     fontWeight: 900,
     color: '#ED9700',
     textTransform: 'uppercase',
+    '@media (max-width: 600px)': {
+      fontSize: '2vh',
+    },
   },
   subtitleFoot: {
+    display: 'flex',
     fontSize: '3vh',
-    fontWeight: 500,
+    fontWeight: 900,
     color: '#233D91',
     textTransform: 'uppercase',
+    '@media (max-width: 600px)': {
+      fontSize: '2vh',
+    },
   },
   subtitleVariantFoot: {
+    display: 'flex',
     fontSize: '3vh',
-    fontWeight: 500,
+    fontWeight: 900,
     color: '#6C8EFE',
     marginLeft: '0.5rem',
     marginRight: '0.5rem',
     textTransform: 'uppercase',
+    '@media (max-width: 600px)': {
+      fontSize: '2vh',
+    },
   },
   subtitleVariant: {
+    display: 'flex',
     fontSize: '3vh',
     fontWeight: 900,
     color: '#EA6B0F',
     marginLeft: '0.5rem',
     marginRight: '0.5rem',
     textTransform: 'uppercase',
+    '@media (max-width: 600px)': {
+      fontSize: '2vh',
+    },
   },
   foot: {
     display: 'flex',
@@ -124,5 +145,12 @@ const useStyles = makeStyles<DefaultTheme>({
     height: 'fit-content',
     marginBottom: '5rem',
     marginTop: '5rem',
+    '@media (max-width: 1024px)': {
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: '100%',
+      marginBottom: '1rem',
+    },
   },
 })
