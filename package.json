@@ -41,7 +41,7 @@
     "env-cmd": "^10.1.0",
     "fs": "^0.0.1-security",
     "gatsby": "^2.32.12",
-    "gatsby-image": "^3.3.0",
+    "gatsby-image": "^3.11.0",
     "gatsby-plugin-config": "^1.0.7",
     "gatsby-plugin-eslint": "^2.0.8",
     "gatsby-plugin-google-fonts": "^1.0.1",
