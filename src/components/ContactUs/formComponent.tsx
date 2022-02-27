@@ -62,63 +62,67 @@ export default function ContactUs(): JSX.Element {
   return (
     <div className={classes.root}>
       <form className={classes.form} onSubmit={handleSubmit}>
-        <div className={classes.eachInput}>
-          <label className={classes.label}>Full Name</label>
-          <input
-            className={classes.input}
-            onChange={handleChange}
-            name="user_name"
-            type="text"
-            placeholder="John Doe"
-            required={true}
-          />
+        <div className={classes.firstColumn}>
+          <div className={classes.eachInput}>
+            <label className={classes.label}>Full Name</label>
+            <input
+              className={classes.input}
+              onChange={handleChange}
+              name="user_name"
+              type="text"
+              placeholder="John Doe"
+              required={true}
+            />
+          </div>
+          <div className={classes.eachInput}>
+            <label className={classes.label}>Email</label>
+            <input
+              onChange={handleChange}
+              className={classes.input}
+              name="user_email"
+              type="email"
+              placeholder="name@email.com"
+              required={true}
+            />
+          </div>
+          <div className={classes.eachInput}>
+            <label className={classes.label}>Phone Number</label>
+            <input
+              onChange={handleChange}
+              className={classes.input}
+              name="user_phone"
+              type="text"
+              placeholder="+10000000000"
+              required={true}
+            />
+          </div>
         </div>
-        <div className={classes.eachInput}>
-          <label className={classes.label}>Email</label>
-          <input
-            onChange={handleChange}
-            className={classes.input}
-            name="user_email"
-            type="email"
-            placeholder="name@email.com"
-            required={true}
-          />
-        </div>
-        <div className={classes.eachInput}>
-          <label className={classes.label}>Phone Number</label>
-          <input
-            onChange={handleChange}
-            className={classes.input}
-            name="user_phone"
-            type="text"
-            placeholder="+10000000000"
-            required={true}
-          />
-        </div>
-        <div className={classes.eachInput}>
-          <label className={classes.label}>Subject</label>
-          <input
-            onChange={handleChange}
-            className={classes.input}
-            name="user_subject"
-            type="text"
-            placeholder="Stake proposal"
-            required={true}
-          />
-        </div>
-        <div className={classes.eachInput}>
-          <label className={classes.label}>Message</label>
-          <textarea
-            onChange={handleChange}
-            className={classes.textarea}
-            name="message"
-            placeholder="How can we help you?"
-          />
-        </div>
-        <div className={classes.buttonDiv}>
-          <Button className={classes.button} type="submit">
-            SEND MESSAGE
-          </Button>
+        <div className={classes.secondColumn}>
+          <div className={classes.eachInput}>
+            <label className={classes.label}>Subject</label>
+            <input
+              onChange={handleChange}
+              className={classes.input}
+              name="user_subject"
+              type="text"
+              placeholder="Stake proposal"
+              required={true}
+            />
+          </div>
+          <div className={classes.eachInput}>
+            <label className={classes.label}>Message</label>
+            <textarea
+              onChange={handleChange}
+              className={classes.textarea}
+              name="message"
+              placeholder="How can we help you?"
+            />
+          </div>
+          <div className={classes.buttonDiv}>
+            <Button className={classes.button} type="submit">
+              SEND MESSAGE
+            </Button>
+          </div>
         </div>
       </form>
     </div>
@@ -135,34 +139,59 @@ const useStyles = makeStyles<DefaultTheme>({
     backgroundColor: '#FBEACC',
     marginTop: '10vh',
     zIndex: 1,
-    '@media (max-width: 1024px)': {
+    '@media (max-width: 1280px)': {
       backgroundColor: 'transparent',
       marginTop: '2rem',
     },
   },
   form: {
     display: 'flex',
-    width: '90%',
-    flexWrap: 'wrap',
-    height: '35rem',
-    alignItems: 'center',
+    width: '70%',
+    height: 'fit-content',
+    alignItems: 'flex-start',
     justifyContent: 'flex-start',
-    flexDirection: 'column',
-    '@media (max-width: 1024px)': {
+    flexDirection: 'row',
+    '@media (max-width: 1280px)': {
       width: '100%',
-      flexWrap: 'nowrap',
+      flexDirection: 'column',
       height: 'fit-content',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+  },
+  firstColumn: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
+    width: '50%',
+    '@media (max-width: 1280px)': {
+      width: '100%',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+  },
+  secondColumn: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
+    width: '50%',
+    '@media (max-width: 1280px)': {
+      width: '100%',
+      alignItems: 'center',
+      justifyContent: 'center',
     },
   },
   eachInput: {
     display: 'flex',
-    width: '40%',
+    width: '100%',
     height: 'fit-content',
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
     flexDirection: 'column',
     marginBottom: '2rem',
-    '@media (max-width: 1024px)': {
+    '@media (max-width: 1280px)': {
       width: '90%',
     },
   },
@@ -186,7 +215,7 @@ const useStyles = makeStyles<DefaultTheme>({
     '&::placeholder': {
       color: '#ED9700',
     },
-    '@media (max-width: 1024px)': {
+    '@media (max-width: 1280px)': {
       width: '100%',
     },
   },
@@ -205,17 +234,17 @@ const useStyles = makeStyles<DefaultTheme>({
     '&::placeholder': {
       color: '#ED9700',
     },
-    '@media (max-width: 1024px)': {
+    '@media (max-width: 1280px)': {
       width: '100%',
     },
   },
   buttonDiv: {
     display: 'flex',
-    width: '40%',
+    width: '100%',
     height: 'fit-content',
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
-    '@media (max-width: 1024px)': {
+    '@media (max-width: 1280px)': {
       alignItems: 'center',
       justifyContent: 'center',
       width: '100%',
@@ -225,8 +254,6 @@ const useStyles = makeStyles<DefaultTheme>({
     width: '15rem',
     height: '100%',
     fontSize: '2.5vh',
-    marginLeft: '1rem',
-    marginRight: '1rem',
     fontWeight: 800,
     color: '#FFFFff',
     backgroundColor: '#ED9700',
@@ -235,7 +262,7 @@ const useStyles = makeStyles<DefaultTheme>({
     '&:hover': {
       backgroundColor: '#F4C066',
     },
-    '@media (max-width: 1024px)': {
+    '@media (max-width: 1280px)': {
       width: '90%',
     },
   },
