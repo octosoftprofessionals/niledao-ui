@@ -175,8 +175,6 @@ const useStyles = makeStyles<DefaultTheme>({
     width: '10rem',
     height: '12vh',
     fontSize: '2.5vh',
-    marginLeft: '0.5rem',
-    marginRight: '0.5rem',
     fontWeight: 800,
     borderRadius: '0px',
     color: '#233D91',
