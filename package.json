@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop -H 0.0.0.0",
+    "develop": "env-cmd gatsby develop -H 0.0.0.0",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
@@ -38,6 +38,7 @@
     "@mui/material": "^5.4.2",
     "dotenv": "^8.6.0",
     "emailjs-com": "^3.2.0",
+    "env-cmd": "^10.1.0",
     "fs": "^0.0.1-security",
     "gatsby": "^2.32.12",
     "gatsby-image": "^3.3.0",
