@@ -1,4 +1,4 @@
-import Home from './layout/Home'
+import Home from './layout/Index'
 import FirstLand from './FirstLand'
 import SecondLand from './SecondLand'
 import ThirdLand from './ThirdLand'
