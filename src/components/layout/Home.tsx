@@ -1,7 +1,7 @@
 import React from 'react'
 import NavBar from './navbar'
 import Footer from './footer'
-import { ThemeProvider, createMuiTheme, makeStyles } from '@material-ui/core/styles'
+import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 import { main } from './theme'
 import './global.css'
 

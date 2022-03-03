@@ -26,9 +26,9 @@ export default function ContactUs(): JSX.Element {
   useEffect(() => {
     const fetchData = async () => {
       const result = {
-        user_id: process.env.REACT_APP_USER_ID,
-        service_id: process.env.REACT_APP_SERVICE_ID,
-        template_id: process.env.REACT_APP_TEMPLATE_ID,
+        user_id: process.env.GATSBY_APP_USER_ID,
+        service_id: process.env.GATSBY_APP_SERVICE_ID,
+        template_id: process.env.GATSBY_APP_TEMPLATE_ID,
       }
       setData(result)
     }
