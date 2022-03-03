@@ -42,16 +42,16 @@ module.exports = {
         allExtensions: true,
       },
     },
-    {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-        serviceID: process.env.GATSBY_APP_SERVICE_ID,
-        templateID: process.env.GATSBY_APP_TEMPLATE_ID,
-        userID: process.env.GATSBY_APP_USER_ID,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-contentful`,
+    //   options: {
+    //     spaceId: process.env.CONTENTFUL_SPACE_ID,
+    //     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+    //     serviceID: process.env.GATSBY_APP_SERVICE_ID,
+    //     templateID: process.env.GATSBY_APP_TEMPLATE_ID,
+    //     userID: process.env.GATSBY_APP_USER_ID,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
