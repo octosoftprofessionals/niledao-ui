@@ -15,9 +15,9 @@ export default function Footer(): JSX.Element {
       <div className={classes.threeColumns}>
         <div className={classes.column}>
           <Typography className={classes.description}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque bibendum nulla congue volutpat
-            facilisis. Duis sodales fringilla mauris sed blandit. Nam gravida turpis in arcu sodales auctor. Duis tempus
-            faucibus turpis, vitae bibendum neque pharetra sit amet. Morbi in faucibus augue.
+            The flood deposits rich fertile soil along the Nile, an area that was otherwise desert, now grows crops. The
+            right amount of flood creates a rich and nourishing harvest, the Nile brings nutrients to the land, allowing
+            for cultivation that yields bountiful harvests.
           </Typography>
         </div>
         <div className={classes.column}>
