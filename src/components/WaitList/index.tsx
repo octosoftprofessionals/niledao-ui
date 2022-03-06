@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles'
 import { Typography } from '@material-ui/core'
 import { DefaultTheme } from '@material-ui/styles'
 import Icon from '../../assets/IconContact.svg'
-import Image from '../../assets/contactResponsive.svg'
 import Form from './formWaitList'
 
 export default function WaitList(): JSX.Element {

@@ -224,6 +224,9 @@ const useStyles = makeStyles<DefaultTheme>({
     top: '',
     right: '0',
     zIndex: 2,
+    '@media (max-width: 1280px)': {
+      display: 'none',
+    },
   },
   rectangle: {
     display: 'flex',
@@ -232,6 +235,9 @@ const useStyles = makeStyles<DefaultTheme>({
     marginTop: '5rem',
     position: 'absolute',
     zIndex: 3,
+    '@media (max-width: 1280px)': {
+      display: 'none',
+    },
   },
   footButton: {
     display: 'flex',
