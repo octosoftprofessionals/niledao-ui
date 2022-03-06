@@ -30,7 +30,6 @@ export default function formWaitList(): JSX.Element {
         telegram: information.telegram,
       })
       .then(response => {
-        console.log('response', response)
         return alert(response.data)
       })
     setInformation({
