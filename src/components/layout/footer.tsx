@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import { DefaultTheme } from '@material-ui/styles'
 import { Typography } from '@material-ui/core'
 import Logo from '../../assets/LogoFooter.svg'
+import { Link } from 'gatsby'
 
 export default function Footer(): JSX.Element {
   const classes = useStyles()
@@ -22,18 +23,15 @@ export default function Footer(): JSX.Element {
         </div>
         <div className={classes.column}>
           <Typography className={classes.descriptionTitle}>LINKS</Typography>
-          <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#home">
+          <Link className={classes.links} to="/#home" style={{ textDecoration: 'none' }}>
             <Typography className={classes.description}>Home</Typography>
-          </a>
-          <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#aboutus">
+          </Link>
+          <Link className={classes.links} to="/#aboutus" style={{ textDecoration: 'none' }}>
             <Typography className={classes.description}>About Us</Typography>
-          </a>
-          <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#cycle">
+          </Link>
+          <Link className={classes.links} to="/#cycle" style={{ textDecoration: 'none' }}>
             <Typography className={classes.description}>The Cycle</Typography>
-          </a>
-          <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#contactUs">
-            <Typography className={classes.description}>Contact Us</Typography>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

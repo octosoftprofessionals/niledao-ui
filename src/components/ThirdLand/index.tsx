@@ -1,9 +1,13 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { Typography } from '@material-ui/core'
+import { Typography, Button } from '@material-ui/core'
 import { DefaultTheme } from '@material-ui/styles'
 import ImageTitle from '../../assets/TitleThird.svg'
 import Boxes from './boxes'
+import Telegram from '../../assets/Telegram.svg'
+import ImageContact from '../../assets/TriangleThird.svg'
+import Image from '../../assets/contactResponsive.svg'
+import Rectangle from '../../assets/Rectangle.svg'
 
 export default function ThirdLand(): JSX.Element {
   const classes = useStyles()
@@ -28,17 +32,31 @@ export default function ThirdLand(): JSX.Element {
       </div>
       <Boxes />
       <div className={classes.foot}>
-        <div className={classes.firstPart}>
-          <Typography className={classes.subtitleFoot}>
-            · The
-            <Typography className={classes.subtitleVariantFoot}>Nile</Typography>
-            means life and this cycle
-          </Typography>
-        </div>
-        <div className={classes.secondPart}>
-          <Typography className={classes.subtitleFoot}>brought prosperity to people ·</Typography>
+        <img src={Rectangle} alt="" className={classes.rectangle} />
+        <img src={ImageContact} alt="" className={classes.imageFoot} />
+        <div className={classes.divTextFoot}>
+          <div className={classes.firstPart}>
+            <Typography className={classes.subtitleFoot}>
+              · The
+              <Typography className={classes.subtitleVariantFoot}>Nile</Typography>
+              means life and this cycle
+            </Typography>
+          </div>
+          <div className={classes.secondPart}>
+            <Typography className={classes.subtitleFoot}>brought prosperity to people ·</Typography>
+          </div>
         </div>
       </div>
+      <div className={classes.image}>
+        <img src={Image} alt="Responsive" className={classes.imageResponsive} />
+        <div className={classes.blur}></div>
+      </div>
+      <a href="https://t.me/+ZKLf1J0DMz44M2Jh" rel="noreferrer" target="_blank" className={classes.footButton}>
+        <Button className={classes.button}>
+          JOIN OUR TELEGRAM
+          <img src={Telegram} alt="telegram" className={classes.imageButton} />
+        </Button>
+      </a>
     </div>
   )
 }
@@ -175,14 +193,99 @@ const useStyles = makeStyles<DefaultTheme>({
     justifyContent: 'center',
     width: '100%',
     height: 'fit-content',
-    marginBottom: '5rem',
-    marginTop: '5rem',
+    marginBottom: '10rem',
+    marginTop: '10rem',
     '@media (max-width: 1024px)': {
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
       width: '100%',
-      marginBottom: '1rem',
+      marginTop: '5rem',
+      marginBottom: '5rem',
     },
+  },
+  divTextFoot: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+    zIndex: 5,
+    '@media (max-width: 1024px)': {
+      marginBottom: '1rem',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: '100%',
+    },
+  },
+  imageFoot: {
+    display: 'flex',
+    position: 'absolute',
+    top: '',
+    right: '0',
+    zIndex: 2,
+  },
+  rectangle: {
+    display: 'flex',
+    width: '100%',
+    height: '100%',
+    marginTop: '5rem',
+    position: 'absolute',
+    zIndex: 3,
+  },
+  footButton: {
+    display: 'flex',
+    width: '100%',
+    textDecoration: 'none',
+    height: 'fit-content',
+    alignItems: 'center',
+    marginBottom: '5rem',
+    justifyContent: 'center',
+  },
+  button: {
+    width: '20rem',
+    height: '100%',
+    fontSize: '3vh',
+    fontWeight: 800,
+    color: '#FFFFff',
+    backgroundColor: '#ED9700',
+    border: 'transparent',
+    borderRadius: '10px',
+    zIndex: 5,
+    '&:hover': {
+      backgroundColor: '#F4C066',
+    },
+    '@media (max-width: 1024px)': {
+      width: '90%',
+      height: '4rem',
+      margin: '0',
+    },
+  },
+  imageButton: {
+    display: 'flex',
+    width: '2rem',
+    height: '2rem',
+    marginLeft: '0.5rem',
+  },
+  image: {
+    display: 'none',
+    '@media (max-width: 1024px)': {
+      display: 'flex',
+      width: '100%',
+      height: 'fit-content',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      marginBottom: '1rem',
+      marginTop: '1rem',
+    },
+  },
+  blur: {
+    display: 'flex',
+    width: '100%',
+    height: '5rem',
+    boxShadow: '1px -61px 47px 0px rgba(255, 246, 231,1)',
+    backgroundColor: '#FFF6E7',
+    zIndex: 5,
   },
 })
