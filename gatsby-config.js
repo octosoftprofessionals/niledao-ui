@@ -6,8 +6,8 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `Nile DAO`,
-    siteUrl: `www.localhost:8000.com`,
-    description: `Nile web page`,
+    siteUrl: `https://www.niledao.io/`,
+    description: `Nile DAO web page`,
     titleTemplate: '%s · Nile',
     url: ``,
     image: '/images/logo.png',

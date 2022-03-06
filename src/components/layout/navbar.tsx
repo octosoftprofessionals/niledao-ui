@@ -6,6 +6,7 @@ import { DefaultTheme } from '@material-ui/styles'
 import Logo from '../../assets/LogoNavBar.svg'
 import IconNavbar from '../../assets/IconNavbar.svg'
 import CloseNavbar from '../../assets/closeNavbar.svg'
+import { Link } from 'gatsby'
 
 export default function NavBar(): JSX.Element {
   const { width } = useWindowSize()
@@ -37,21 +38,18 @@ export default function NavBar(): JSX.Element {
           <div className={classes.divLinks}>
             {width > 1280 ? (
               <>
-                <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#home">
+                <Link className={classes.links} to="/#home" style={{ textDecoration: 'none' }}>
                   <Button className={classes.buttons}>home</Button>
-                </a>
-                <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#aboutus">
+                </Link>
+                <Link className={classes.links} to="/#aboutus" style={{ textDecoration: 'none' }}>
                   <Button className={classes.buttons}>about us</Button>
-                </a>
-                <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#cycle">
+                </Link>
+                <Link className={classes.links} to="/#cycle" style={{ textDecoration: 'none' }}>
                   <Button className={classes.buttons}>the cycle</Button>
-                </a>
-                <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#contactUs">
-                  <Button className={classes.buttons}>contact us</Button>
-                </a>
-                <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="">
+                </Link>
+                <Link className={classes.links} to="/Waitlist" style={{ textDecoration: 'none' }}>
                   <Button className={classes.specialButton}>join waitlist</Button>
-                </a>
+                </Link>
               </>
             ) : (
               <>
@@ -69,16 +67,15 @@ export default function NavBar(): JSX.Element {
           </div>
           {width < 1280 && fixDrop ? (
             <div className={dropOpen ? classes.visible : classes.hidden}>
-              <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#aboutus">
+              <Link className={classes.links} to="/#aboutus" style={{ textDecoration: 'none' }}>
                 <Button className={classes.buttons}>about us</Button>
-              </a>
-              <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#cycle">
+              </Link>
+              <Link className={classes.links} to="/#cycle" style={{ textDecoration: 'none' }}>
                 <Button className={classes.buttons}>the cycle</Button>
-              </a>
-              <a className={classes.links} rel="noreferrer" style={{ textDecoration: 'none' }} href="#contactUs">
-                <Button className={classes.buttons}>contact us</Button>
-              </a>
-              <Button className={classes.specialButton}>Waitlist</Button>
+              </Link>
+              <Link className={classes.links} to="/Waitlist" style={{ textDecoration: 'none' }}>
+                <Button className={classes.specialButton}>Waitlist</Button>
+              </Link>
             </div>
           ) : null}
         </Toolbar>
@@ -165,6 +162,7 @@ const useStyles = makeStyles<DefaultTheme>({
       backgroundColor: '#F4C066',
     },
     '@media (max-width: 1280px)': {
+      fontWeight: 500,
       width: '100%',
       height: '4rem',
       margin: '0',
@@ -185,6 +183,7 @@ const useStyles = makeStyles<DefaultTheme>({
       borderBottom: '5px solid #233D91',
     },
     '@media (max-width: 1280px)': {
+      fontWeight: 500,
       width: '100%',
       height: '4rem',
       margin: '0',

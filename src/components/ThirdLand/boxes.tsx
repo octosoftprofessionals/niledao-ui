@@ -46,7 +46,7 @@ const useStyles = makeStyles<DefaultTheme>({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    zIndex: 1,
+    zIndex: 4,
   },
   boxes: {
     display: 'flex',
