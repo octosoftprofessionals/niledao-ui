@@ -31,7 +31,7 @@ export default function formWaitList(): JSX.Element {
       })
       .then(response => {
         console.log('response', response)
-        return alert(response.data)
+        return alert(response.data.message)
       })
     setInformation({
       fullName: '',
