@@ -4,7 +4,6 @@ import { Typography, Button } from '@material-ui/core'
 import { DefaultTheme } from '@material-ui/styles'
 import ImageTitle from '../../assets/TitleThird.svg'
 import Boxes from './boxes'
-import Telegram from '../../assets/Telegram.svg'
 import ImageContact from '../../assets/TriangleThird.svg'
 import Image from '../../assets/contactResponsive.svg'
 import Rectangle from '../../assets/Rectangle.svg'
@@ -51,12 +50,7 @@ export default function ThirdLand(): JSX.Element {
         <img src={Image} alt="Responsive" className={classes.imageResponsive} />
         <div className={classes.blur}></div>
       </div>
-      <a href="https://t.me/+ZKLf1J0DMz44M2Jh" rel="noreferrer" target="_blank" className={classes.footButton}>
-        <Button className={classes.button}>
-          JOIN OUR TELEGRAM
-          <img src={Telegram} alt="telegram" className={classes.imageButton} />
-        </Button>
-      </a>
+
     </div>
   )
 }
@@ -64,7 +58,6 @@ const useStyles = makeStyles<DefaultTheme>({
   root: {
     display: 'flex',
     width: '100%',
-    minHeight: '100vh',
     height: 'fit-content',
     flexDirection: 'column',
     alignItems: 'center',
@@ -193,7 +186,7 @@ const useStyles = makeStyles<DefaultTheme>({
     justifyContent: 'center',
     width: '100%',
     height: 'fit-content',
-    marginBottom: '10rem',
+    marginBottom: '5rem',
     marginTop: '10rem',
     '@media (max-width: 1024px)': {
       flexDirection: 'column',
@@ -238,40 +231,6 @@ const useStyles = makeStyles<DefaultTheme>({
     '@media (max-width: 1280px)': {
       display: 'none',
     },
-  },
-  footButton: {
-    display: 'flex',
-    width: '100%',
-    textDecoration: 'none',
-    height: 'fit-content',
-    alignItems: 'center',
-    marginBottom: '5rem',
-    justifyContent: 'center',
-  },
-  button: {
-    width: '20rem',
-    height: '100%',
-    fontSize: '3vh',
-    fontWeight: 800,
-    color: '#FFFFff',
-    backgroundColor: '#ED9700',
-    border: 'transparent',
-    borderRadius: '10px',
-    zIndex: 5,
-    '&:hover': {
-      backgroundColor: '#F4C066',
-    },
-    '@media (max-width: 1024px)': {
-      width: '90%',
-      height: '4rem',
-      margin: '0',
-    },
-  },
-  imageButton: {
-    display: 'flex',
-    width: '2rem',
-    height: '2rem',
-    marginLeft: '0.5rem',
   },
   image: {
     display: 'none',
