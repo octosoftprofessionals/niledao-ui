@@ -31,7 +31,7 @@ export default function formWaitList(): JSX.Element {
       })
       .then(response => {
         console.log('response', response)
-        return alert(response.data.message)
+        return alert(response.data)
       })
     setInformation({
       fullName: '',
@@ -134,6 +134,8 @@ const useStyles = makeStyles<DefaultTheme>({
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
     flexDirection: 'row',
+    zIndex: 5,
+
     '@media (max-width: 1280px)': {
       width: '100%',
       flexDirection: 'column',

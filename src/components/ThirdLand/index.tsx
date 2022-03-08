@@ -186,7 +186,7 @@ const useStyles = makeStyles<DefaultTheme>({
     justifyContent: 'center',
     width: '100%',
     height: 'fit-content',
-    marginBottom: '5rem',
+    marginBottom: '10rem',
     marginTop: '10rem',
     '@media (max-width: 1024px)': {
       flexDirection: 'column',
@@ -231,6 +231,15 @@ const useStyles = makeStyles<DefaultTheme>({
     '@media (max-width: 1280px)': {
       display: 'none',
     },
+  },
+  footButton: {
+    display: 'flex',
+    width: '100%',
+    textDecoration: 'none',
+    height: 'fit-content',
+    alignItems: 'center',
+    marginBottom: '5rem',
+    justifyContent: 'center',
   },
   image: {
     display: 'none',

@@ -35,7 +35,7 @@ const useStyles = makeStyles<DefaultTheme>({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    zIndex: 1,
+    zIndex: 5,
     background: `linear-gradient(180deg, rgba(251,234,204,1) 40%, rgba(255,246,231,1) 100%)`,
     marginTop: '5vh',
     paddingBottom: '10vh',
