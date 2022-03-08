@@ -187,7 +187,7 @@ const useStyles = makeStyles<DefaultTheme>({
     color: '#233D91',
   },
   input: {
-    width: '30rem',
+    width: '70%',
     height: '3rem',
     padding: '1%',
     fontSize: '3vh',
