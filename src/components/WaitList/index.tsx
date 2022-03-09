@@ -10,7 +10,7 @@ export default function WaitList(): JSX.Element {
   const classes = useStyles()
 
   return (
-    <div id="#Waitlist" className={classes.root}>
+    <div id="Waitlist" className={classes.root}>
       <div className={classes.titleDiv}>
         <Typography className={classes.title}>
           WAITLIST
