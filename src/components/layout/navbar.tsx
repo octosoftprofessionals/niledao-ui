@@ -47,7 +47,7 @@ export default function NavBar(): JSX.Element {
                 <Link className={classes.links} to="/#cycle" style={{ textDecoration: 'none' }}>
                   <Button className={classes.buttons}>the cycle</Button>
                 </Link>
-                <Link className={classes.links} to="/#Waitlist" style={{ textDecoration: 'none' }}>
+                <Link className={classes.links} to="/Waitlist" style={{ textDecoration: 'none' }}>
                   <Button className={classes.specialButton}>join waitlist</Button>
                 </Link>
               </>
@@ -73,7 +73,7 @@ export default function NavBar(): JSX.Element {
               <Link className={classes.links} to="/#cycle" style={{ textDecoration: 'none' }}>
                 <Button className={classes.buttons}>the cycle</Button>
               </Link>
-              <Link className={classes.links} to="/#Waitlist" style={{ textDecoration: 'none' }}>
+              <Link className={classes.links} to="/Waitlist" style={{ textDecoration: 'none' }}>
                 <Button className={classes.specialButton}>Waitlist</Button>
               </Link>
             </div>
