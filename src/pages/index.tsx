@@ -1,5 +1,5 @@
 import React from 'react'
-import { Home, FirstLand, SecondLand, ThirdLand } from '../components'
+import { Home, FirstLand, SecondLand, ThirdLand, WaitList } from '../components'
 
 export default function LandPage(): JSX.Element {
   return (
@@ -7,6 +7,7 @@ export default function LandPage(): JSX.Element {
       <FirstLand />
       <SecondLand />
       <ThirdLand />
+      <WaitList />
     </Home>
   )
 }

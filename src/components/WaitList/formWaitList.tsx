@@ -119,7 +119,7 @@ const useStyles = makeStyles<DefaultTheme>({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    marginTop: '10vh',
+    marginTop: '2rem',
     zIndex: 1,
     '@media (max-width: 1280px)': {
       backgroundColor: 'transparent',
@@ -133,6 +133,8 @@ const useStyles = makeStyles<DefaultTheme>({
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
     flexDirection: 'row',
+    zIndex: 5,
+
     '@media (max-width: 1280px)': {
       width: '100%',
       flexDirection: 'column',
@@ -184,7 +186,7 @@ const useStyles = makeStyles<DefaultTheme>({
     color: '#233D91',
   },
   input: {
-    width: '25rem',
+    width: '70%',
     height: '3rem',
     padding: '1%',
     fontSize: '3vh',
@@ -226,6 +228,7 @@ const useStyles = makeStyles<DefaultTheme>({
     height: 'fit-content',
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
+    marginTop: '2rem',
     '@media (max-width: 1280px)': {
       marginTop: '2rem',
       alignItems: 'center',
@@ -235,7 +238,7 @@ const useStyles = makeStyles<DefaultTheme>({
   },
   button: {
     width: '15rem',
-    height: '100%',
+    height: '4rem',
     fontSize: '2.5vh',
     fontWeight: 800,
     color: '#FFFFff',
