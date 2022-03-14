@@ -50,7 +50,6 @@ export default function ThirdLand(): JSX.Element {
         <img src={Image} alt="Responsive" className={classes.imageResponsive} />
         <div className={classes.blur}></div>
       </div>
-
     </div>
   )
 }
@@ -187,7 +186,7 @@ const useStyles = makeStyles<DefaultTheme>({
     width: '100%',
     height: 'fit-content',
     marginBottom: '10rem',
-    marginTop: '10rem',
+    marginTop: '9rem',
     '@media (max-width: 1024px)': {
       flexDirection: 'column',
       alignItems: 'center',
@@ -209,6 +208,9 @@ const useStyles = makeStyles<DefaultTheme>({
       alignItems: 'center',
       justifyContent: 'center',
       width: '100%',
+    },
+    '@media (min-width: 1280px)': {
+      marginTop: '-10rem',
     },
   },
   imageFoot: {

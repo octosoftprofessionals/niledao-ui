@@ -229,7 +229,7 @@ const useStyles = makeStyles<DefaultTheme>({
     height: 'fit-content',
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
-    marginTop: '3rem',
+    marginTop: '2rem',
     '@media (max-width: 1280px)': {
       marginTop: '2rem',
       alignItems: 'center',
