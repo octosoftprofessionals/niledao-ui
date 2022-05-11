@@ -37,7 +37,7 @@
     "@mui/icons-material": "^5.4.2",
     "@mui/material": "^5.4.2",
     "axios": "^0.26.0",
-    "dotenv": "^8.6.0",
+    "dotenv": "^16.0.1",
     "emailjs-com": "^3.2.0",
     "env-cmd": "^10.1.0",
     "fs": "^0.0.1-security",
